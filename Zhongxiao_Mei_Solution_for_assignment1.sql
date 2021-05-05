@@ -138,8 +138,7 @@ select	ProductSubCategoryID
 		, Color, ListPrice 
 from	Production.Product
 where	(Color IN ('Red','Black') 
-		AND ListPrice BETWEEN 1000 AND 2000 
-		AND ProductSubCategoryID <> 1)
+		AND ListPrice BETWEEN 1000 AND 2000)
 		OR
 		(Color IN ('Red','Black') AND ProductSubCategoryID = 1)
 order by	ProductID
@@ -151,8 +150,7 @@ select	ProductSubCategoryID
 		, Color, ListPrice 
 from	Production.Product
 where	(Color IN ('Red','Black') 
-		AND ListPrice BETWEEN 1000 AND 2000 
-		AND ProductSubCategoryID <> 1)
+		AND ListPrice BETWEEN 1000 AND 2000)
 		OR
 		(Color IN ('Red','Black') AND ProductSubCategoryID = 1)
 		OR
