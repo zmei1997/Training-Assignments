@@ -121,7 +121,7 @@ order by	Color desc
 /*
 	question 15
 */
-select	ProductSubcategoryID, Color
+select	distinct ProductSubcategoryID, Color
 from	Production.Product
 where	ProductSubcategoryID is not NULL
 		and Color is not NULL
@@ -133,31 +133,31 @@ order by	ProductSubcategoryID, Color
 	question 16
 */
 -- solution that only includes products in red and black
-SELECT ProductSubCategoryID
-      , LEFT([Name],35) AS [Name]
-      , Color, ListPrice 
-FROM Production.Product
-WHERE (Color IN ('Red','Black') 
-	  AND ListPrice BETWEEN 1000 AND 2000 
-	  AND ProductSubCategoryID <> 1)
-	  OR
-	  (Color IN ('Red','Black') AND ProductSubCategoryID = 1)
-ORDER BY ProductID
+select	ProductSubCategoryID
+		, LEFT([Name],35) as [Name]
+		, Color, ListPrice 
+from	Production.Product
+where	(Color IN ('Red','Black') 
+		AND ListPrice BETWEEN 1000 AND 2000 
+		AND ProductSubCategoryID <> 1)
+		OR
+		(Color IN ('Red','Black') AND ProductSubCategoryID = 1)
+order by	ProductID
 ;
 
 -- solution that includes products in other colors (not only red and black)
-SELECT ProductSubCategoryID
-      , LEFT([Name],35) AS [Name]
-      , Color, ListPrice 
-FROM Production.Product
-WHERE (Color IN ('Red','Black') 
-	  AND ListPrice BETWEEN 1000 AND 2000 
-	  AND ProductSubCategoryID <> 1)
-	  OR
-	  (Color IN ('Red','Black') AND ProductSubCategoryID = 1)
-	  OR
-	  (Color not IN ('Red','Black'))
-ORDER BY ProductID
+select	ProductSubCategoryID
+		, LEFT([Name],35) as [Name]
+		, Color, ListPrice 
+from	Production.Product
+where	(Color IN ('Red','Black') 
+		AND ListPrice BETWEEN 1000 AND 2000 
+		AND ProductSubCategoryID <> 1)
+		OR
+		(Color IN ('Red','Black') AND ProductSubCategoryID = 1)
+		OR
+		(Color not IN ('Red','Black'))
+order by	ProductID
 ;
 
 /*
