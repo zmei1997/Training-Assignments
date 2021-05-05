@@ -165,11 +165,7 @@ order by	ProductID
 */
 select	ProductSubcategoryID, [Name], Color, ListPrice
 from	Production.Product
-where	[Name] like 'Mountain-500 Black%'
-		or [Name] like 'Road-350-W Yellow%'
-		or [Name] like 'HL Mountain Frame - Silver%'
-		or [Name] like 'HL Road Frame - Red%'
-		or [Name] like 'HL Road Frame - Black%'
-		and ProductSubcategoryID is not NULL
-		and Color is not NULL
+where	Color in ('Red','Black') 
+		and ProductSubCategoryID = 1
+		or ListPrice between 1000 and 2000
 ;
