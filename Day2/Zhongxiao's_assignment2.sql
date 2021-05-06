@@ -109,7 +109,10 @@ where	LocationID = 10
 select	ProductID, Shelf, avg(Quantity) as TheAvg
 from	Production.ProductInventory
 group by	ProductID, Shelf
-;/*
+;
+
+
+/*
 	query 10
 */
 select	ProductID, Shelf, avg(Quantity) as TheAvg
@@ -166,7 +169,9 @@ from	dbo.Products p
 		dbo.Orders o
 		on od.OrderID = o.OrderID
 where	DATEDIFF(year, GETDATE(), o.OrderDate) <= 25
-;/*
+;
+
+/*
 	query 15
 */
 select	top 5 ShipPostalCode
@@ -231,7 +236,8 @@ where	m.rowNumber = 1
 
 /*
 	query 21
-*/select	c.ContactName, sum(od.Quantity) as [count of products]
+*/
+select	c.ContactName, sum(od.Quantity) as [count of products]
 from	dbo.Customers c
 		inner join
 		dbo.Orders o
@@ -244,7 +250,8 @@ group by	c.ContactName
 
 /*
 	query 22
-*/select	c.CustomerID, sum(od.Quantity) as [count of products]
+*/
+select	c.CustomerID, sum(od.Quantity) as [count of products]
 from	dbo.Customers c
 		inner join
 		dbo.Orders o
