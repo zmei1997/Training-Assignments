@@ -179,20 +179,21 @@ where	o.ShipCity is NULL
 select	mostOrders.City, mostOrders.countOfOrder, mostTotalQuantity.totalQuantity
 from (
 	select	Top 1 e.City, count(o.OrderID) as countOfOrder 
-	from	Employees e 
-			inner join Orders o
+	from	dbo.Employees e 
+			inner join 
+			dbo.Orders o
 			on e.EmployeeID = o.EmployeeID
 	group by	e.City
 	) mostOrders
 	inner join 
 	(
 	select	Top 1 c.City, count(od.Quantity) as totalQuantity 
-	from	[Order Details] od 
+	from	dbo.[Order Details] od 
 			inner join
-			Orders o 
+			dbo.Orders o 
 			on od.OrderID = o.OrderID
 			inner join 
-			Customers c 
+			dbo.Customers c 
 			on c.CustomerID = o.CustomerID
 	group by	c.City
 	) mostTotalQuantity
