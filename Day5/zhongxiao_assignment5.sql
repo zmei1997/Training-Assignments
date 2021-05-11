@@ -140,7 +140,7 @@ create table Divisions (
 );
 
 create table Physical_locations (
-	physical_id int primary key,
+	physical_id int,
 	addresses varchar(50),
 	division_id int foreign key references Divisions(division_id)
 );
