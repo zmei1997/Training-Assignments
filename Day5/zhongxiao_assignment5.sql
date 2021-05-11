@@ -138,10 +138,15 @@ create table Contacts (
 	mail_drop_records varchar(50)
 );
 
+create table Physical_locations (
+	physical_id int primary key,
+	addresses varchar(50)
+);
+
 create table Divisions (
 	division_id int not null,
 	division_name varchar(20),
-	physical_locations varchar(50),
+	physical_id int foreign key references physical_locations(physical_id),
 	company_id int foreign key references Companies(company_id),
 	contact_id int foreign key references Contacts(contact_id)
 );
