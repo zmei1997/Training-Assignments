@@ -126,11 +126,6 @@ group by	m.[name]
 /*
 	question 5
 */
-create table Companies (
-	company_id int primary key,
-	company_name varchar(20)
-);
-
 create table Contacts (
 	contact_id int primary key,
 	contact_name varchar(20),
@@ -138,15 +133,21 @@ create table Contacts (
 	mail_drop_records varchar(50)
 );
 
-create table Physical_locations (
-	physical_id int primary key,
-	addresses varchar(50)
+create table Divisions (
+	division_id int primary key,
+	division_name varchar(20),
+	contact_id int foreign key references Contacts(contact_id)
 );
 
-create table Divisions (
-	division_id int not null,
-	division_name varchar(20),
-	physical_id int foreign key references physical_locations(physical_id),
-	company_id int foreign key references Companies(company_id),
-	contact_id int foreign key references Contacts(contact_id)
+create table Physical_locations (
+	physical_id int primary key,
+	addresses varchar(50),
+	division_id int foreign key references Divisions(division_id)
+);
+
+create table Companies (
+	company_id int not null,
+	company_name varchar(20),
+	division_id int foreign key references Divisions(division_id)
+	constraint uc_company unique(company_id, company_name, division_id)
 );
