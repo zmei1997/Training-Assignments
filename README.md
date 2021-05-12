@@ -8,5 +8,5 @@
 [Design diagram for practice 1  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_1.PNG)
 [Design diagram for practice 2  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_2.PNG)
 [Design diagram for practice 3  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_3.PNG)
-#### [See the Document for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
+#### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
