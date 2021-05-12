@@ -5,5 +5,8 @@
 #### Assignment_04: [My Solution](https://github.com/zmei1997/Training-Assignments/blob/main/Day4/Zhongxiao's%20assignment4.sql)
 #### Assignment_05: [My Solution](https://github.com/zmei1997/Training-Assignments/blob/main/Day5/zhongxiao_assignment5.sql)
 #### Assignment_06: [My Solution](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/zhongxiao%20assignment6.sql)
+[Design diagram for practice 1  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_1.PNG)
+[Design diagram for practice 2  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_2.PNG)
+[Design diagram for practice 3  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_3.PNG)
 #### [See the Document for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
