@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>problem7</title>
+    <style>
+        button {
+            width:100%;
+        }
+        #expression {
+            text-align:right;
+        }
+    </style>
+    <script>
+        function display(val) {
+            document.getElementById("expression").value += val;
+        }
+
+        function reset() {
+            document.getElementById("expression").value = "";
+        }
+
+        function calculation() {
+            var input = document.getElementById("expression").value;
+            var output = eval(input);
+            document.getElementById("expression").value = output;
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="expression" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="display(1)">1</button>
+            </td>
+            <td>
+                <button onclick="display(2)">2</button>
+            </td>
+            <td>
+                <button onclick="display(3)">3</button>
+            </td>
+            <td>
+                <button onclick="display('+')">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="display(4)">4</button>
+            </td>
+            <td>
+                <button onclick="display(5)">5</button>
+            </td>
+            <td>
+                <button onclick="display(6)">6</button>
+            </td>
+            <td>
+                <button onclick="display('-')">-</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="display(7)">7</button>
+            </td>
+            <td>
+                <button onclick="display(8)">8</button>
+            </td>
+            <td>
+                <button onclick="display(9)">9</button>
+            </td>
+            <td>
+                <button onclick="display('*')">*</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="reset()">C</button>
+            </td>
+            <td>
+                <button onclick="display(0)">0</button>
+            </td>
+            <td>
+                <button onclick="calculation()">=</button>
+            </td>
+            <td>
+                <button onclick="display('/')">/</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
