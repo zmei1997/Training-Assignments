@@ -8,6 +8,13 @@
 [Design diagram for practice 1  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_1.PNG)
 [Design diagram for practice 2  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_2.PNG)
 [Design diagram for practice 3  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day6/design_for_practice_3.PNG)
-#### Assignment_07_HTML_one: [Source Code for practice 1](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem1.html)
+#### Assignment_07_HTML_one: 
+[Source Code for practice 1  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem1.html)
+[Source Code for practice 2  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem2.html)
+[Source Code for practice 3  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem3.html)
+[Source Code for practice 4  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem4.html)
+[Source Code for practice 5  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem5.html)
+[Source Code for practice 6  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem6.html)
+[Source Code for practice 7  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem7.html)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
