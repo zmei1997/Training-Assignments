@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>html_p1</title>
+    <style>
+        input[type="text"], [type="button"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        td {
+            width: 50%;
+        }
+
+        #regtext {
+            background-color: #0094ff;
+            color: white;
+        }
+
+        #TC {
+            color: deepskyblue;
+        }
+
+        #registerbtn {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        #signinbtn {
+            background-color: limegreen;
+            color: white;
+        }
+
+        @media screen and (min-width:900px) {
+            [type="text"], [type="button"] {
+                min-width: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th colspan="2">
+                    Sign Up
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="First Name" />
+                </td>
+                <td>
+                    <input type="text" placeholder="Last Name" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" placeholder="Mobile No." />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" placeholder="Email Address" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" placeholder="Password" />
+                </td>
+                <td>
+                    <input type="password" placeholder="Confirm Password" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="checkbox" /><strong>I Agree</strong></label>
+                </td>
+                <td>
+                    By clicking <a id="regtext">Register</a>, you agree to the <a id="TC">Terms and Conditions</a> set out by this site, including our Cookie Use.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="registerbtn" type="button" value="Register" />
+                </td>
+                <td>
+                    <input id="signinbtn" type="button" value="Sign In" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

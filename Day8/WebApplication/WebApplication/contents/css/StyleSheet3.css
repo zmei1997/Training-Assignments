@@ -1,0 +1,43 @@
+﻿#applybtn {
+    border:0px;
+    padding:5px;
+    background-color:#ff9c00;
+    color:white;
+    margin-left:1000px;
+}
+
+    #applybtn:hover {
+        color: gray;
+    }
+
+#news {
+    margin-left:100px;
+}
+
+.article {
+    margin-left:100px;
+    height:400px;
+}
+
+.pagingbar li {
+    list-style:none;
+    display:inline-block;
+}
+
+.pagingbar li input[type=submit]{
+    background-color:#4ca0db;
+    border:none;
+}
+
+    .pagingbar li input[type=submit]:hover {
+        background-color:orange;
+    }
+
+header {
+    padding:40px;
+    background-color:#1c395b;
+}
+
+section {
+
+}

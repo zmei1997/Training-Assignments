@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>html_p3</title>
+    <style>
+        h1,label {
+            font-style: italic;
+        }
+        h1 {
+            margin-left:40px;
+        }
+        div {
+            background-color:pink;
+            width:350px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>FLIGHT ORDER</h1>
+        <form>
+            <label>From</label>
+            <label style="padding-left:8em">To</label><br />
+            <input type="text" placeholder="enter a city" />
+            <input type="text" placeholder="enter a city" />
+            <br />
+            <label style="padding-left:11em"><input type="checkbox" />Prefer directs</label><br />
+            <label>Departure Date</label>
+            <label style="padding-left:4em">Time Interval</label><br />
+            <input type="text" placeholder="09.06.2014" />
+            <input type="text" placeholder="00:20" style="width:73px" />
+            <input type="text" placeholder="05:00" style="width:73px" />
+            <br />
+            <label>Return Date</label>
+            <label style="padding-left:5em">Time Interval</label><br />
+            <input type="text" placeholder="13.06.2014" />
+            <input type="text" placeholder="16:00" style="width:73px" />
+            <input type="text" placeholder="22:00" style="width:73px" />
+            <br />
+            <label>12+</label>
+            <label style="padding-left:2em">2-12</label>
+            <label style="padding-left:2em">0-2</label>
+            <label style="padding-left:2em">Choose class</label>
+            <br />
+            <input type="number" style="width:43px" value="0" />
+            <input type="number" style="width:43px" value="0" />
+            <input type="number" style="width:43px" value="0" />
+            <select style="width:170px">
+                <option>Economy</option>
+            </select>
+            <br />
+            <input class="btn" type="button" style="width:170px; margin-left:165px" value="Search" />
+        </form>
+    </div>
+</body>
+</html>

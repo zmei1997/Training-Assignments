@@ -1,0 +1,28 @@
+﻿ul li {
+    list-style:none;
+    color:gainsboro;
+    padding:5px;
+}
+
+a, label {
+    text-decoration: none;
+    color: gainsboro;
+}
+
+section {
+    display:inline-block;
+    margin-top:0px;
+    margin-right:25px;
+}
+
+label {
+    padding-left:50px;
+}
+
+.links {
+    background-color:#272e31;
+}
+
+footer {
+    background-color:#000000;
+}
