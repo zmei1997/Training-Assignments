@@ -3,8 +3,8 @@
 > 2. We cannot use HAVING without GROUP BY. However, we can use WHERE without GROUP BY.
 2. CTE benefits
 > 1. CTE can be used to create a recursive query.
->   2. CTE does not store the definition in metadata.
->   3. CTE improves readability and manageability of complex SQL statements.
+> 2. CTE does not store the definition in metadata.
+> 3. CTE improves readability and manageability of complex SQL statements.
 1. CTE vs. View
  >  1. CTE is the substitute for a View when the general use of a view is not required.
 >   2. CTE does not store the definition in metadata, while a view stores the definition in metadata.
@@ -25,11 +25,11 @@
 5. Transactions
   > 1. When transaction1 allows transaction2 to read the uncommitted data and after that transaction1 rollbacks then dirty reads happens
 >   2. when transaction1 and transaction2 read and modify the same data but transaction2 finishes it work before transaction1 then lost update happens
-    <br> > 1. read uncommitted and read committed isolation level.
+ >> 1. read uncommitted and read committed isolation level.
   > 3. non-repeatable read concurrency problem
-    <br> > 1. transaction1 is reading the same data twice but in between transaction2 updates the data so in both reads by transaction1 we will get different results.
+  >> 1. transaction1 is reading the same data twice but in between transaction2 updates the data so in both reads by transaction1 we will get different results.
   > 4. Phantom read:
-    <br> > 1. when transaction1 reads the same data twice but transaction2 inserts new data
+  >> 1. when transaction1 reads the same data twice but transaction2 inserts new data
 6. View
   > 1. **benefits**
     <br>1. it can make complex queries easy.
