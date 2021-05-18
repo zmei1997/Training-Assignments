@@ -16,6 +16,7 @@
 [Source Code for practice 5  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem5.html)
 [Source Code for practice 6  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem6.html)
 [Source Code for practice 7  |](https://github.com/zmei1997/Training-Assignments/blob/main/Day7/WebApplication/WebApplication/index_problem7.html)
-#### Assignment_08: [My Solution Source codes](https://github.com/zmei1997/Training-Assignments/tree/main/Day8/WebApplication/WebApplication)
+#### Assignment_08_css_html: [My Solution Source codes](https://github.com/zmei1997/Training-Assignments/tree/main/Day8/WebApplication/WebApplication)
+#### Assignment_10_JavaScript_exercise: [My Solution Source codes](https://github.com/zmei1997/Training-Assignments/blob/main/Day10/JavaScriptExercise/JavaScriptExercise/content/script/JavaScript_exercise.js)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
