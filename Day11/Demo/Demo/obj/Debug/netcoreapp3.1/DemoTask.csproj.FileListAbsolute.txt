@@ -1,0 +1,13 @@
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.exe
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.deps.json
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.runtimeconfig.json
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.runtimeconfig.dev.json
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.dll
+C:\Users\15821\source\repos\Demo\Demo\bin\Debug\netcoreapp3.1\DemoTask.pdb
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.csprojAssemblyReference.cache
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.AssemblyInfoInputs.cache
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.AssemblyInfo.cs
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.csproj.CoreCompileInputs.cache
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.dll
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.pdb
+C:\Users\15821\source\repos\Demo\Demo\obj\Debug\netcoreapp3.1\DemoTask.genruntimeconfig.cache
