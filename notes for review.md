@@ -40,20 +40,21 @@ Join is used to combine data from multiple queries with the column names of all 
 10.	Can there be multiple group by columns?
 > Yes, there could be. If there are multiple columns following GROUP BY, SQL will put the rows with the same values in all those columns in the same group.
 
-1.  CTE benefits
+11.  CTE benefits
 > 1. CTE can be used to create a recursive query.
 > 2. CTE does not store the definition in metadata.
 > 3. CTE improves readability and manageability of complex SQL statements.
-1. CTE vs. View
+
+12. CTE vs. View
 > 1. CTE is the substitute for a View when the general use of a view is not required.
 > 2. CTE does not store the definition in metadata, while a view stores the definition in metadata.
 
-1. Unique constraint vs. Primary key
+13. Unique constraint vs. Primary key
 > 1. Unique constraint allows one null value, but primary key does not.
 >   2. In a table only one primary key is allowed but multiple unique constraints
 >   3. Primary key will sort the data in asc order by default, but unique key does not do that.
 >   4. Primary key by default creates the clustered index but unique create non clustered index.
-5. Transactions
+14. Transactions
 > 1. When transaction1 allows transaction2 to read the uncommitted data and after that transaction1 rollbacks then dirty reads happens
 > 2. when transaction1 and transaction2 read and modify the same data but transaction2 finishes it work before transaction1 then lost update happens
 >> 1. read uncommitted and read committed isolation level.
@@ -61,7 +62,7 @@ Join is used to combine data from multiple queries with the column names of all 
 >> 1. transaction1 is reading the same data twice but in between transaction2 updates the data so in both reads by transaction1 we will get different results.
 > 4. Phantom read:
 >> 1. when transaction1 reads the same data twice but transaction2 inserts new data
-1. View
+15. View
 > 1. **benefits**
 >> 1. it can make complex queries easy.
 >> 2. it can give different result set of the same table.
@@ -69,9 +70,9 @@ Join is used to combine data from multiple queries with the column names of all 
 >> 1. it cannot accept the parameters (which can cause SQL injection)
 >> 2. it cannot be recursive.
 >> 3. modifying data using view does not give the desired results always if there are multiple base tables.
-1. Trigger
+16. Trigger
 > 1. Special Tables: inserted, deleted.
-8. **Index**
+17. **Index**
 > 1. Clustered index is created automatically when a primary key is created, non-clustered index is created when a unique constraint is applied.
 > 2. A table can have only one clustered index, but it can have multiple non-clustered-255.
 > 3. A clustered index will by default sort the data in a physical order, but non-clustered index cannot sort the data.
@@ -80,3 +81,6 @@ Join is used to combine data from multiple queries with the column names of all 
 >> 2. Create index on a column which is frequently used in the where clause.
 >> 3. Create index on a column which can contain multiple null values.
 >> 4. Create index on column with foreign key relationship (those columns which participates the join condition)
+18. Value type vs. Reference type
+>1. Value type holds the data within its own memory allocation, but a reference type contains a pointer to another memory location that holds the data. 
+>2. Value type is stored in the stack while reference type is stored in the heap.
