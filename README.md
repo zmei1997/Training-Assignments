@@ -21,5 +21,6 @@
 #### Assignment_11: 
 [My Solution Source codes for JavaScript_coding_exercise](https://github.com/zmei1997/Training-Assignments/tree/main/Day11/JavaScript_Coding_Exercise/JavaScript_Coding_Exercise)
 <br>[My Solution Source codes for C#.NET_coding_exercise](https://github.com/zmei1997/Training-Assignments/tree/main/Day11/Demo)
+#### Assignment_11: [My Solution Source codes C# d2](https://github.com/zmei1997/Training-Assignments/tree/main/Day12/Lab2)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
