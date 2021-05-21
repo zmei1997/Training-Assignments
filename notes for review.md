@@ -84,3 +84,8 @@ Join is used to combine data from multiple queries with the column names of all 
 18. Value type vs. Reference type
 >1. Value type holds the data within its own memory allocation, but a reference type contains a pointer to another memory location that holds the data. 
 >2. Value type is stored in the stack while reference type is stored in the heap.
+
+19. Difference between overriding and hiding
+> 1.	Overriding only redefines the implementation of the method, while hiding can completely redefine the method.
+> 2.	In overriding, when base class reference variable pointing to the object of the derived class, then it will call the overridden method in the derived class, while in hiding, when base class reference variable pointing to the object of the derived class, then it will call the hidden method in the base class.
+> 3.	Overriding is an object type, while hiding is a reference type.
