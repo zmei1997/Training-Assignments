@@ -89,3 +89,13 @@ Join is used to combine data from multiple queries with the column names of all 
 > 1.	Overriding only redefines the implementation of the method, while hiding can completely redefine the method.
 > 2.	In overriding, when base class reference variable pointing to the object of the derived class, then it will call the overridden method in the derived class, while in hiding, when base class reference variable pointing to the object of the derived class, then it will call the hidden method in the base class.
 > 3.	Overriding is an object type, while hiding is a reference type.
+
+20. Abstract class vs. Interface
+>1.	A class can only extend one abstract class but can implement multiple interfaces.
+>2.	Abstract Class can have an access modifier, while interface does not have access modifiers. 
+>3.	Abstract class can have class members like private or protected, while interfaces are public by default.
+>4.	Abstract Class can have data fields, while interface cannot contain data fields.
+>5.	An abstract class can give complete, default code which should be overridden, while interface cannot provide any implemented code.
+>6.	An abstract class defines the identity of a class, while Interfaces help to define the peripheral abilities of a class.
+>7.	An abstract class can declare constructors and destructors, while an interface cannot declare constructors or destructors.
+>8.	Abstract class can have abstract and non-abstract methods, while Interface can have only abstract methods. 
