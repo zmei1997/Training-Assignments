@@ -23,6 +23,6 @@
 <br>[My Solution Source codes for C#.NET_coding_exercise](https://github.com/zmei1997/Training-Assignments/tree/main/Day11/Demo)
 #### Assignment_12: [My Solution Source codes C# d2](https://github.com/zmei1997/Training-Assignments/tree/main/Day12/Lab2)
 #### Assignment_13: [My Solution Source codes C# d3](https://github.com/zmei1997/Training-Assignments/tree/main/Day13/Lab3)
-#### Modified program for Customer/Employee/Department Manager[Source Code](https://github.com/zmei1997/Training-Assignments/tree/main/Day14/Modified%20ConsoleApp4/ConsoleApp4/ConsoleApp4)
+#### Modified program for Customer/Employee/Department Manager: [Source Code](https://github.com/zmei1997/Training-Assignments/tree/main/Day14/Modified%20ConsoleApp4/ConsoleApp4/ConsoleApp4)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
