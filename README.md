@@ -24,5 +24,6 @@
 #### Assignment_12: [My Solution Source codes C# d2](https://github.com/zmei1997/Training-Assignments/tree/main/Day12/Lab2)
 #### Assignment_13: [My Solution Source codes C# d3](https://github.com/zmei1997/Training-Assignments/tree/main/Day13/Lab3)
 #### Day14&15 Modified program for Customer/Employee/Department Manager: [Source Code](https://github.com/zmei1997/Training-Assignments/tree/main/Day14/Modified%20ConsoleApp4/ConsoleApp4/ConsoleApp4)
+#### Day16 ADO.NET: [Source code](https://github.com/zmei1997/Training-Assignments/tree/main/Day16/MinionsConsoleApp)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
