@@ -8,7 +8,10 @@ namespace DapperTutorial
         {
             ManageDepartment manageDepartment = new ManageDepartment();
             manageDepartment.Run();
-            Console.Read();
+            //Console.Read();
+
+            //ManageEmployee me = new ManageEmployee();
+            //me.Run();
         }
     }
 }

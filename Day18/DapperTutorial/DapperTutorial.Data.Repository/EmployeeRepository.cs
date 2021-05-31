@@ -25,8 +25,10 @@ namespace DapperTutorial.Data.Repository
         {
             using (IDbConnection connection = helper.GetConnection())
             {
-                string str = "Select e.Id,e.EName,e.Salary,e.DeptId,d.Id,d.DName,d.Loc from Employee e inner join Dept d on e.DeptId=d.Id";
-                return connection.Query<Employee, Dept, Employee>(str, (e, d) => { e.Dept = d; return e; });
+                //string str = "Select e.Id,e.EName,e.Salary,e.DeptId,d.Id,d.DName,d.Loc from Employee e inner join Dept d on e.DeptId=d.Id";
+                //return connection.Query<Employee, Dept, Employee>(str, (e, d) => { e.Dept = d; return e; });
+                string str = "Select e.Id,e.EName,e.Salary,e.DeptId,d.Id,d.DName from Employee e inner join Dept d on e.DeptId=d.Id";
+                return connection.Query< Employee, Dept, Employee >(str, (e, d) => { e.Dept = d; return e; });
             }
         }
 
@@ -34,7 +36,7 @@ namespace DapperTutorial.Data.Repository
         {
             using (IDbConnection connection = helper.GetConnection())
             {
-                string str = "Select e.Id,e.EName,e.Salary,e.DeptId from Employee e  where e.id=@empid";
+                string str = "Select e.Id,e.EName,e.Salary,e.DeptId from Employee e where e.id=@empid";
                 return connection.QueryFirstOrDefault<Employee>(str, new { empid = id });
             }
         }
