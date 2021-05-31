@@ -1,0 +1,17 @@
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.deps.json
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.dll
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.pdb
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.AssemblyInfoInputs.cache
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.AssemblyInfo.cs
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.csproj.CoreCompileInputs.cache
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.dll
+C:\Users\Madhusudan Sharma\source\repos\MayBatch\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.pdb
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.deps.json
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.dll
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\bin\Debug\netcoreapp3.1\DapperTutorial.Data.Model.pdb
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.csprojAssemblyReference.cache
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.AssemblyInfoInputs.cache
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.AssemblyInfo.cs
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.csproj.CoreCompileInputs.cache
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.dll
+K:\Antra training\Day18_0528\Day18\DapperTutorial\DapperTutorial.Data.Model\obj\Debug\netcoreapp3.1\DapperTutorial.Data.Model.pdb
