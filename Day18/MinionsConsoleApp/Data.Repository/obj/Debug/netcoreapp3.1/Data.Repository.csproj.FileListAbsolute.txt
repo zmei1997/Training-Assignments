@@ -1,0 +1,24 @@
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Model.dll
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csprojAssemblyReference.cache
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.AssemblyInfoInputs.cache
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.AssemblyInfo.cs
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.deps.json
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.dll
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.pdb
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Model.pdb
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csproj.CoreCompileInputs.cache
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csproj.CopyComplete
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.dll
+C:\Users\15821\source\repos\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.pdb
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.deps.json
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.dll
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Repository.pdb
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Model.dll
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\bin\Debug\netcoreapp3.1\Data.Model.pdb
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csprojAssemblyReference.cache
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.AssemblyInfoInputs.cache
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.AssemblyInfo.cs
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csproj.CoreCompileInputs.cache
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.csproj.CopyComplete
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.dll
+K:\Antra training\Day18_0528\Day18\MinionsConsoleApp\Data.Repository\obj\Debug\netcoreapp3.1\Data.Repository.pdb
