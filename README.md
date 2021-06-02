@@ -30,7 +30,7 @@
 #### Day14&15 Modified program for Customer/Employee/Department Manager: [Source Code](https://github.com/zmei1997/Training-Assignments/tree/main/Day14/Modified%20ConsoleApp4/ConsoleApp4/ConsoleApp4)
 #### Day16 ADO.NET: [Source code](https://github.com/zmei1997/Training-Assignments/tree/main/Day16/MinionsConsoleApp)
 #### Day17&Day18: [Source code](https://github.com/zmei1997/Training-Assignments/tree/main/Day18)
-### - .NET Web App Project
+### - .NET Web App Project --> [MovieShop Project](https://github.com/zmei1997/Training-Assignments/tree/main/MovieShop)
 #### Day19: [Source code](https://github.com/zmei1997/Training-Assignments/tree/main/Day19)
 #### [See the markdown file for in-class assignment and notes](https://github.com/zmei1997/Training-Assignments/blob/main/notes%20for%20review.md) => [see original docx file](https://github.com/zmei1997/Training-Assignments/blob/main/in-class%20assignments%20and%20notes.docx)
 
