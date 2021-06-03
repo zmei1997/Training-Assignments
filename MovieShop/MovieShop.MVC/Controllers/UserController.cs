@@ -9,7 +9,31 @@ namespace MovieShop.MVC.Controllers
     public class UserController : Controller
     {
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Purchase()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Favorite()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Unfavorite()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Review()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Movie()
         {
             return View();
         }

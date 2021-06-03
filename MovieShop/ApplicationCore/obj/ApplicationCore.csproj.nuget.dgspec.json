@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {}
+    "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+    "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectPath": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\15821\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\obj\\",
+        "outputPath": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\15821\\AppData\\Roaming\\NuGet\\NuGet.Config",
