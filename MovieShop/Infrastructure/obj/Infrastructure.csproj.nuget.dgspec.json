@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "K:\\Antra training\\Day19_0601\\Day19\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "K:\\Antra training\\Day19_0601\\Day19\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\Antra training\\Day19_0601\\Day19\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "K:\\Antra training\\Day19_0601\\Day19\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\15821\\.nuget\\packages\\",
-        "outputPath": "K:\\Antra training\\Day19_0601\\Day19\\MovieShop\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\15821\\AppData\\Roaming\\NuGet\\NuGet.Config",
