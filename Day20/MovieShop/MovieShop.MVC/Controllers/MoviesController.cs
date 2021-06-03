@@ -13,5 +13,29 @@ namespace MovieShop.MVC.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult TopRated()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult TopRevenue()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Genre()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Reviews()
+        {
+            return View();
+        }
     }
 }

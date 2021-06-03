@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\15821\\source\\repos\\MovieShop\\MovieShop.MVC\\MovieShop.MVC.csproj",
+      "projectUniqueName": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\MovieShop.MVC\\MovieShop.MVC.csproj",
       "projectName": "MovieShop.MVC",
-      "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\MovieShop.MVC\\MovieShop.MVC.csproj",
+      "projectPath": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\MovieShop.MVC\\MovieShop.MVC.csproj",
       "packagesPath": "C:\\Users\\15821\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\MovieShop.MVC\\obj\\",
+      "outputPath": "K:\\Antra training\\Day20_0602\\Day20\\MovieShop\\MovieShop.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\15821\\AppData\\Roaming\\NuGet\\NuGet.Config",

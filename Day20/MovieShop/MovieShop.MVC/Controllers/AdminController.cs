@@ -9,7 +9,13 @@ namespace MovieShop.MVC.Controllers
     public class AdminController : Controller
     {
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Movie()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Purchases()
         {
             return View();
         }
