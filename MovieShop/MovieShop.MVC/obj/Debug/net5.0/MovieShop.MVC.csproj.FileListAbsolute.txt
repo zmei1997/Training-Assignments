@@ -38,12 +38,9 @@ C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\ref\MovieSh
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\MovieShop.MVC.pdb
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\MovieShop.MVC.genruntimeconfig.cache
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\MovieShop.MVC.csproj.CopyComplete
-C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
-C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Cast\Index.cshtml.g.cs
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Genres\Index.cshtml.g.cs
 C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
-C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\bin\Debug\net5.0\appsettings.Development.json
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\bin\Debug\net5.0\appsettings.json
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.MVC.exe
@@ -100,3 +97,31 @@ K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Movi
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Purchases.cshtml.g.cs
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Review.cshtml.g.cs
 K:\Antra training\Day20_0602\Day20\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Movie.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.deps.json
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.runtimeconfig.json
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.runtimeconfig.dev.json
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.exe
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\ApplicationCore.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.dll
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\ApplicationCore.pdb
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\bin\Debug\net5.0\MovieShop.API.pdb
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\MovieShop.MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Movie.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Purchases.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\Genre.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\Reviews.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\TopRated.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\TopRevenue.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Favorite.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Movie.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Purchase.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Review.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\Unfavorite.cshtml.g.cs
+C:\Users\15821\source\repos\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs

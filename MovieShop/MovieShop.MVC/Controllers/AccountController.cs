@@ -9,7 +9,7 @@ namespace MovieShop.MVC.Controllers
     public class AccountController : Controller
     {
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Register()
         {
             return View();
         }
