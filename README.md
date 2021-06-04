@@ -1,3 +1,5 @@
+# Training-Project
+### [MovieShop Project](https://github.com/zmei1997/Training-Assignments/tree/main/MovieShop)
 # Training-Assignments
 ### - SQL Server
 #### Assignment_01: [My Solution](https://github.com/zmei1997/Training-Assignments/blob/main/Day1/Zhongxiao_Mei_Solution_for_assignment1.sql)
