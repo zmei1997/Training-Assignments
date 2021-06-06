@@ -19,6 +19,7 @@ namespace Infrastructure.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Trailer> Trailers { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<MovieCast> MovieCasts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,8 @@ namespace Infrastructure.Data
                 .UsingEntity<Dictionary<string, object>>("MovieGenre",
                     m => m.HasOne<Genre>().WithMany().HasForeignKey("GenreId"),
                     g => g.HasOne<Movie>().WithMany().HasForeignKey("MovieId"));
+
+            modelBuilder.Entity<MovieCast>(ConfigureMovieCast);
         }
 
         private void ConfigureTrailer(EntityTypeBuilder<Trailer> builder)
@@ -54,6 +57,14 @@ namespace Infrastructure.Data
             builder.Property(m => m.CreatedDate).HasDefaultValueSql("getdate()");
 
             builder.Ignore(m => m.Rating);
+        }
+
+        private void ConfigureMovieCast(EntityTypeBuilder<MovieCast> builder)
+        {
+            builder.ToTable("MovieCast");
+            builder.HasKey(mc => new { mc.CastId, mc.MovieId, mc.Character });
+            builder.HasOne(mc => mc.Movie).WithMany(mc => mc.MovieCasts).HasForeignKey(mc => mc.MovieId);
+            builder.HasOne(mc => mc.Cast).WithMany(mc => mc.MovieCasts).HasForeignKey(mc => mc.CastId);
         }
     }
 }
