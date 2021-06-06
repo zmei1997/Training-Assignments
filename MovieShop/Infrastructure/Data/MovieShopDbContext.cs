@@ -30,10 +30,10 @@ namespace Infrastructure.Data
         {
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
             modelBuilder.Entity<Movie>(ConfigureMovie);
-            // Many to many: Movie, Genre
+            // Many to Many: Movie has many Genres, and Genre belongs to many movies
             modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies)
-                .UsingEntity<Dictionary<string, object>>("MovieGenre",
-                    m => m.HasOne<Genre>().WithMany().HasForeignKey("GenreId"),
+                .UsingEntity<Dictionary<string, object>>("MovieGenre", // create MovieGenre table
+                    m => m.HasOne<Genre>().WithMany().HasForeignKey("GenreId"), // configure MovieGenre
                     g => g.HasOne<Movie>().WithMany().HasForeignKey("MovieId"));
 
             modelBuilder.Entity<MovieCast>(ConfigureMovieCast);
@@ -43,10 +43,10 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Favorite>(ConfigureFavorite);
             modelBuilder.Entity<Role>(ConfigureRole);
 
-            // Many to Many: Role, User
+            // Many to Many: User has many roles, and Role belongs to many users
             modelBuilder.Entity<User>().HasMany(u => u.Roles).WithMany(r => r.Users)
-                .UsingEntity<Dictionary<string, object>>("UserRole", 
-                ur=>ur.HasOne<Role>().WithMany().HasForeignKey("RoleId"), 
+                .UsingEntity<Dictionary<string, object>>("UserRole", // create UserRole table
+                ur=>ur.HasOne<Role>().WithMany().HasForeignKey("RoleId"), // configure UserRole
                 ur=>ur.HasOne<User>().WithMany().HasForeignKey("UserId"));
 
         }
