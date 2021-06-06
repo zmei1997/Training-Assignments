@@ -1,0 +1,56 @@
+Dapper 
+Entity Framework
+
+
+2. UI => HTML CSS Razor syntax =>
+
+1. ***Service Layer => Business , get the entites from Data Layer and convert them into Models and send to UI *** spend most of  the time
+
+Data Layer => Interacting with database and send the entities to Servicelayer , 
+C# code should able to connect to Database and execute SQL Queries...
+
+
+
+Database => SQL Server, Oracle, Nosql=> 
+
+SQL Select * top 30 from Movies order by Revenue desc
+
+
+class MovieRepostory
+ {
+1.	List<Movie> GetTopRevenueMovies() 
+	 {
+	    ADO.NET => SQLConection,SQLCommand, open, read, execute, close...
+		
+		1. talk to by SQL serever
+		2. connect it and open the connection
+		3. execute sql query or SP => 30 rows
+		4. map the sql data to C# entities
+		5. Close the connection
+		6. return the List<Movie>
+		
+		20 to 30 lines repeated code
+		
+		ORM => Object Relational mapping/mapper
+		
+		Dapper => StackOverflow => microORM => When u have Dataabse already and u have to write your own SQL Statements
+		
+		Entity Framework => Microsoft  Full ORM => We can also create the database without single line of SQL statement with just C#
+		 => WE can get/craete/update/delete the data from database without single line of SQL, with just using C# and LINQ
+		  => EF will convert your LINQ query to SQL query and execute it on SQL server and once the execution happpebs it will automaticaly map thje
+		  data to  C# entities
+		  
+		  
+		  Movies table has 500000
+		  
+		 var movies = movies.where(m=> m.budget> 1000000).ToList();
+		  //Select * from Movies where budget >1000000
+		   50 movies
+		  
+		 var movies = movies.ToList().where(m=> m.budget> 1000000);
+		 Select * from Movies
+		 500000 in to memory and filtering in my memory 
+		  
+		 => map the data to C# entities
+	}
+ }
