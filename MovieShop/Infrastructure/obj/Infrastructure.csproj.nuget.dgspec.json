@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+    "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\15821\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\obj\\",
+        "outputPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\15821\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,32 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,18 +80,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\15821\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\15821\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +108,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\15821\\source\\repos\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
+              "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
               }
             }
           }
@@ -97,6 +123,32 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -112,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

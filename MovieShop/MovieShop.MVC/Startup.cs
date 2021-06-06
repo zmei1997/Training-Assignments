@@ -10,6 +10,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApplicationCore.ServiceInterfaces;
 using Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
+using Infrastructure.Data;
 
 namespace MovieShop.MVC
 {
@@ -30,6 +32,11 @@ namespace MovieShop.MVC
             services.AddScoped<ICastService, CastService>();
             services.AddScoped<IGenreService, GenreService>();
             services.AddScoped<IUserService, UserService>();
+
+            services.AddDbContext<MovieShopDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
