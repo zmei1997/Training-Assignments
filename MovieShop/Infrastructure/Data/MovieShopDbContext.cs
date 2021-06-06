@@ -22,11 +22,13 @@ namespace Infrastructure.Data
         public DbSet<MovieCast> MovieCasts { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
             modelBuilder.Entity<Movie>(ConfigureMovie);
+            // Many to many
             modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies)
                 .UsingEntity<Dictionary<string, object>>("MovieGenre",
                     m => m.HasOne<Genre>().WithMany().HasForeignKey("GenreId"),
@@ -35,6 +37,7 @@ namespace Infrastructure.Data
             modelBuilder.Entity<MovieCast>(ConfigureMovieCast);
             modelBuilder.Entity<Purchase>(ConfigurePurchase);
             modelBuilder.Entity<User>(ConfigureUser);
+            modelBuilder.Entity<Review>(ConfigureReview);
         }
 
         private void ConfigureTrailer(EntityTypeBuilder<Trailer> builder)
@@ -67,6 +70,7 @@ namespace Infrastructure.Data
         {
             builder.ToTable("MovieCast");
             builder.HasKey(mc => new { mc.CastId, mc.MovieId, mc.Character });
+
             builder.HasOne(mc => mc.Movie).WithMany(mc => mc.MovieCasts).HasForeignKey(mc => mc.MovieId);
             builder.HasOne(mc => mc.Cast).WithMany(mc => mc.MovieCasts).HasForeignKey(mc => mc.CastId);
         }
@@ -92,6 +96,16 @@ namespace Infrastructure.Data
             builder.Property(u => u.PhoneNumber).HasMaxLength(16);
             builder.Property(u => u.Salt).HasMaxLength(1024);
             builder.Property(u => u.IsLocked).HasDefaultValue(false);
+        }
+
+        private void ConfigureReview(EntityTypeBuilder<Review> builder)
+        {
+            builder.ToTable("Review");
+            builder.HasKey(r => new { r.MovieId, r.UserId });
+            builder.Property(r => r.ReviewText).HasMaxLength(20000);
+            builder.Property(r => r.Rating).HasColumnType("decimal(3, 2)");
+            builder.Property(r => r.CreatedDate).HasDefaultValueSql("getdate()");
+            builder.Ignore(r=>r.CreatedDate);
         }
     }
 }
