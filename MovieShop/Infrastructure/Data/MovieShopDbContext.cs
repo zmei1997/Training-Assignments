@@ -23,12 +23,14 @@ namespace Infrastructure.Data
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
             modelBuilder.Entity<Movie>(ConfigureMovie);
-            // Many to many
+            // Many to many: Movie, Genre
             modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies)
                 .UsingEntity<Dictionary<string, object>>("MovieGenre",
                     m => m.HasOne<Genre>().WithMany().HasForeignKey("GenreId"),
@@ -38,6 +40,15 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Purchase>(ConfigurePurchase);
             modelBuilder.Entity<User>(ConfigureUser);
             modelBuilder.Entity<Review>(ConfigureReview);
+            modelBuilder.Entity<Favorite>(ConfigureFavorite);
+            modelBuilder.Entity<Role>(ConfigureRole);
+
+            // Many to Many: Role, User
+            modelBuilder.Entity<User>().HasMany(u => u.Roles).WithMany(r => r.Users)
+                .UsingEntity<Dictionary<string, object>>("UserRole", 
+                ur=>ur.HasOne<Role>().WithMany().HasForeignKey("RoleId"), 
+                ur=>ur.HasOne<User>().WithMany().HasForeignKey("UserId"));
+
         }
 
         private void ConfigureTrailer(EntityTypeBuilder<Trailer> builder)
@@ -106,6 +117,18 @@ namespace Infrastructure.Data
             builder.Property(r => r.Rating).HasColumnType("decimal(3, 2)");
             builder.Property(r => r.CreatedDate).HasDefaultValueSql("getdate()");
             builder.Ignore(r=>r.CreatedDate);
+        }
+
+        private void ConfigureFavorite(EntityTypeBuilder<Favorite> builder)
+        {
+            builder.ToTable("Favorite");
+        }
+
+        private void ConfigureRole(EntityTypeBuilder<Role> builder)
+        {
+            builder.ToTable("Role");
+            builder.HasKey(r => r.Id);
+            builder.Property(r => r.Name).HasMaxLength(20);
         }
     }
 }
