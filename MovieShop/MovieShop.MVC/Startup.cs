@@ -12,6 +12,8 @@ using ApplicationCore.ServiceInterfaces;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data;
+using ApplicationCore.RepositoryInterfaces;
+using Infrastructure.Repositories;
 
 namespace MovieShop.MVC
 {
@@ -28,10 +30,18 @@ namespace MovieShop.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            // Movie service and repository
             services.AddScoped<IMovieService, MovieService>();
-            services.AddScoped<ICastService, CastService>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+
+            // Genre service and repository
             services.AddScoped<IGenreService, GenreService>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
+
+            // Cast service and repository
+            services.AddScoped<ICastService, CastService>();
+            
+            //services.AddScoped<IUserService, UserService>();
 
             services.AddDbContext<MovieShopDbContext>(options =>
             {

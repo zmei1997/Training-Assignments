@@ -169,8 +169,6 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Movie.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\Purchases.cshtml.g.cs
-C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Cast\Index.cshtml.g.cs
-C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Genres\Index.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Movies\Genre.cshtml.g.cs
@@ -228,3 +226,4 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Shared\_MovieCard.cshtml.g.cs

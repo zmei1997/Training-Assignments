@@ -23,5 +23,7 @@ namespace ApplicationCore.Models.Response
         public decimal? Price { get; set; }
         public DateTime ReleaseDate { get; set; }
 
+        public List<GenreResponseModel> Genres { get; set; }
+        public List<CastResponseModel> Casts { get; set; }
     }
 }
