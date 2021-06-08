@@ -40,7 +40,8 @@ namespace MovieShop.MVC
 
             // Cast service and repository
             services.AddScoped<ICastService, CastService>();
-            
+            services.AddScoped<ICastRepository, CastRepository>();
+
             //services.AddScoped<IUserService, UserService>();
 
             services.AddDbContext<MovieShopDbContext>(options =>

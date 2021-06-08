@@ -19,7 +19,17 @@ namespace Infrastructure.Services
         }
         public List<GenreResponseModel> GetAllGenres()
         {
-            throw new NotImplementedException();
+            var genres = _genreRepository.GetAllGenres();
+            var genresList = new List<GenreResponseModel>();
+            foreach(var genre in genres)
+            {
+                genresList.Add(new GenreResponseModel
+                {
+                    Id = genre.Id,
+                    Name = genre.Name
+                });
+            }
+            return genresList;
         }
     }
 }

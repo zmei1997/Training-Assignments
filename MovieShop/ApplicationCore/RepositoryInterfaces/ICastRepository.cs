@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ApplicationCore.RepositoryInterfaces
 {
-    public interface IGenreRepository : IAsyncRepository<Genre>
+    public interface ICastRepository : IAsyncRepository<Cast>
     {
-        IEnumerable<Genre> GetAllGenres();
     }
 }

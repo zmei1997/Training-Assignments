@@ -14,5 +14,10 @@ namespace Infrastructure.Repositories
         public GenreRepository(MovieShopDbContext dbContext) : base(dbContext)
         {
         }
+
+        public IEnumerable<Genre> GetAllGenres()
+        {
+            return _dbContext.Genres.ToList();
+        }
     }
 }

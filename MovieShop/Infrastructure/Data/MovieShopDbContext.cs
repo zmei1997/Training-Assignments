@@ -16,6 +16,7 @@ namespace Infrastructure.Data
 
         }
 
+        public DbSet<Cast> Casts { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Trailer> Trailers { get; set; }
         public DbSet<Movie> Movies { get; set; }
@@ -30,6 +31,7 @@ namespace Infrastructure.Data
         {
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
             modelBuilder.Entity<Movie>(ConfigureMovie);
+            modelBuilder.Entity<Cast>(ConfigureCast);
             // Many to Many: Movie has many Genres, and Genre belongs to many movies
             modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies)
                 .UsingEntity<Dictionary<string, object>>("MovieGenre", // create MovieGenre table
@@ -75,6 +77,15 @@ namespace Infrastructure.Data
             builder.Property(m => m.CreatedDate).HasDefaultValueSql("getdate()");
 
             builder.Ignore(m => m.Rating);
+        }
+
+        private void ConfigureCast(EntityTypeBuilder<Cast> builder)
+        {
+            builder.ToTable("Cast");
+            builder.HasKey(c => c.Id);
+            builder.HasIndex(c => c.Name);
+            builder.Property(c => c.Name).HasMaxLength(128);
+            builder.Property(c => c.ProfilePath).HasMaxLength(2084);
         }
 
         private void ConfigureMovieCast(EntityTypeBuilder<MovieCast> builder)

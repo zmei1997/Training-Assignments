@@ -22,9 +22,9 @@ namespace MovieShop.MVC.Controllers
         public IActionResult Index()
         {
             var movies = _movieService.GetTopRevenueMovies();
-            ViewBag.MoviesCount = movies.Count;
-            ViewBag.PageTitle = "Top Revenue Movie";
-            ViewData["MyCustomData"] = "Some Information";
+            //ViewBag.MoviesCount = movies.Count;
+            //ViewBag.PageTitle = "Top Revenue Movie";
+            //ViewData["MyCustomData"] = "Some Information";
             return View(movies);
         }
 
