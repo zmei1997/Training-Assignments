@@ -17,32 +17,32 @@ namespace MovieShop.MVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var movieDetailsModel = _movieService.GetMovieDetailsById(id);
+            var movieDetailsModel = await _movieService.GetMovieDetailsById(id);
             return View(movieDetailsModel);
         }
 
         [HttpGet]
-        public IActionResult TopRated()
+        public async Task<IActionResult> TopRated()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult TopRevenue()
+        public async Task<IActionResult> TopRevenue()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Genre()
+        public async Task<IActionResult> Genre()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Reviews()
+        public async Task<IActionResult> Reviews()
         {
             return View();
         }

@@ -16,31 +16,31 @@ namespace MovieShop.MVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Purchase()
+        public async Task<IActionResult> Purchase()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Favorite()
+        public async Task<IActionResult> Favorite()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Unfavorite()
+        public async Task<IActionResult> Unfavorite()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Review()
+        public async Task<IActionResult> Review()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Movie()
+        public async Task<IActionResult> Movie()
         {
             return View();
         }

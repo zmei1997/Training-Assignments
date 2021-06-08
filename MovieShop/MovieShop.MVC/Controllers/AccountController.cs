@@ -9,13 +9,13 @@ namespace MovieShop.MVC.Controllers
     public class AccountController : Controller
     {
         [HttpGet]
-        public IActionResult Register()
+        public async Task<IActionResult> Register()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
             return View();
         }

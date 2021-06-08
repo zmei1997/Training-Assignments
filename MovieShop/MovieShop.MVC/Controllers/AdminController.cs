@@ -9,13 +9,13 @@ namespace MovieShop.MVC.Controllers
     public class AdminController : Controller
     {
         [HttpGet]
-        public IActionResult Movie()
+        public async Task<IActionResult> Movie()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Purchases()
+        public async Task<IActionResult> Purchases()
         {
             return View();
         }

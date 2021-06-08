@@ -19,22 +19,22 @@ namespace MovieShop.MVC.Controllers
             _movieService = movieService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var movies = _movieService.GetTopRevenueMovies();
+            var movies = await _movieService.GetTopRevenueMovies();
             //ViewBag.MoviesCount = movies.Count;
             //ViewBag.PageTitle = "Top Revenue Movie";
             //ViewData["MyCustomData"] = "Some Information";
             return View(movies);
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public async Task<IActionResult> Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }

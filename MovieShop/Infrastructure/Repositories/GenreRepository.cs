@@ -1,6 +1,7 @@
 ﻿using ApplicationCore.Entities;
 using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace Infrastructure.Repositories
         {
         }
 
-        public IEnumerable<Genre> GetAllGenres()
+        public async Task<IEnumerable<Genre>> GetAllGenres()
         {
-            return _dbContext.Genres.ToList();
+            return await _dbContext.Genres.ToListAsync();
         }
     }
 }

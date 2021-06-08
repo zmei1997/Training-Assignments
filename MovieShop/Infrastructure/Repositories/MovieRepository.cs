@@ -16,26 +16,22 @@ namespace Infrastructure.Repositories
         {
         }
 
-        public IEnumerable<Movie> GetTopRatedMovies()
+        public async Task<IEnumerable<Movie>> GetTopRatedMovies()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Movie> GetHighestRevenueMovies()
+        public async Task<IEnumerable<Movie>> GetHighestRevenueMovies()
         {
-            var movies = _dbContext.Movies.OrderByDescending(m => m.Revenue).Take(30).ToList();
+            var movies = await _dbContext.Movies.OrderByDescending(m => m.Revenue).Take(30).ToListAsync();
             return movies;
         }
 
-        public Movie GetMovieDetailsById(int id)
+        public async Task<Movie> GetMovieDetailsById(int id)
         {
-            var movie = _dbContext.Movies
-                .Where(m => m.Id == id)
-                .Include(mg => mg.Genres)
-                .Include(m => m.MovieCasts)
-                .ThenInclude(mc => mc.Cast)
-                .FirstOrDefault();
-
+            var movie = await _dbContext.Movies.Where(m => m.Id == id).Include(mc => mc.MovieCasts).ThenInclude(c => c.Cast).Include(g => g.Genres).FirstOrDefaultAsync();
+            var rating = await _dbContext.Reviews.Where(r => r.MovieId == id).DefaultIfEmpty().AverageAsync(r => r == null ? 0 : r.Rating);
+            movie.Rating = rating;
             return movie;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,43 +19,43 @@ namespace Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public virtual T GetById(int id)
+        public virtual async Task<T> GetById(int id)
         {
-            var entity = _dbContext.Set<T>().Find(id);
+            var entity = await _dbContext.Set<T>().FindAsync(id);
             return entity;
         }
 
-        public virtual IEnumerable<T> ListAll()
+        public virtual async Task<IEnumerable<T>> ListAll()
         {
-            return _dbContext.Set<T>().ToList();
+            return await _dbContext.Set<T>().ToListAsync();
         }
 
-        public IEnumerable<T> List(Expression<Func<T, bool>> filter)
+        public async Task<IEnumerable<T>> List(Expression<Func<T, bool>> filter)
         {
-            return _dbContext.Set<T>().Where(filter).ToList();
+            return await _dbContext.Set<T>().Where(filter).ToListAsync();
         }
 
-        public int GetCount(Expression<Func<T, bool>> filter)
+        public async Task<int> GetCount(Expression<Func<T, bool>> filter)
         {
-            return _dbContext.Set<T>().Where(filter).Count();
+            return await _dbContext.Set<T>().Where(filter).CountAsync();
         }
 
-        public bool GetExists(Expression<Func<T, bool>> filter)
+        public async Task<bool> GetExists(Expression<Func<T, bool>> filter)
         {
-            return _dbContext.Set<T>().Where(filter).Any();
+            return await _dbContext.Set<T>().Where(filter).AnyAsync();
         }
 
-        public T Add(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public T Update(T entity)
+        public virtual async Task<T> Add(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(T entity)
+        public virtual async Task<T> Update(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task Delete(T entity)
         {
             throw new NotImplementedException();
         }

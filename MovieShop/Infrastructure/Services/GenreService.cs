@@ -17,9 +17,9 @@ namespace Infrastructure.Services
         {
             _genreRepository = genreRepository;
         }
-        public List<GenreResponseModel> GetAllGenres()
+        public async Task<List<GenreResponseModel>> GetAllGenres()
         {
-            var genres = _genreRepository.GetAllGenres();
+            var genres = await _genreRepository.GetAllGenres();
             var genresList = new List<GenreResponseModel>();
             foreach(var genre in genres)
             {
