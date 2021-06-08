@@ -30,8 +30,9 @@ namespace Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
-            modelBuilder.Entity<Movie>(ConfigureMovie);
             modelBuilder.Entity<Cast>(ConfigureCast);
+            modelBuilder.Entity<Movie>(ConfigureMovie);
+            
             // Many to Many: Movie has many Genres, and Genre belongs to many movies
             modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies)
                 .UsingEntity<Dictionary<string, object>>("MovieGenre", // create MovieGenre table
