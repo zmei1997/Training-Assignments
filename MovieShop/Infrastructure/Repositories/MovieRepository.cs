@@ -1,6 +1,7 @@
 ﻿using ApplicationCore.Entities;
 using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,5 +27,16 @@ namespace Infrastructure.Repositories
             return movies;
         }
 
+        public Movie GetMovieDetailsById(int id)
+        {
+            var movie = _dbContext.Movies
+                .Where(m => m.Id == id)
+                .Include(mg => mg.Genres)
+                .Include(m => m.MovieCasts)
+                .ThenInclude(mc => mc.Cast)
+                .FirstOrDefault();
+
+            return movie;
+        }
     }
 }

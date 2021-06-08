@@ -9,6 +9,5 @@ namespace ApplicationCore.ServiceInterfaces
 {
     public interface ICastService
     {
-        
     }
 }

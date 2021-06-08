@@ -11,5 +11,6 @@ namespace ApplicationCore.RepositoryInterfaces
     {
         IEnumerable<Movie> GetTopRatedMovies();
         IEnumerable<Movie> GetHighestRevenueMovies();
+        Movie GetMovieDetailsById(int id);
     }
 }

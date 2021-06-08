@@ -40,7 +40,7 @@ namespace Infrastructure.Services
         public MovieDetailsResponseModel GetMovieDetailsById(int id)
         {
             // get the movie by id
-            var movie = _movieRepository.GetById(id);
+            var movie = _movieRepository.GetMovieDetailsById(id);
 
             var genreList = new List<GenreResponseModel>();
             foreach (var genre in movie.Genres)
