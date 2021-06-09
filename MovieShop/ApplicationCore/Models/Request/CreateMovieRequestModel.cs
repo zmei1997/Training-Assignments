@@ -20,16 +20,23 @@ namespace ApplicationCore.Models.Request
 
         [Required]
         public string Tagline { get; set; }
+
+        [DataType(DataType.Currency)]
         public decimal? Budget { get; set; }
+
+        [DataType(DataType.Currency)]
         public decimal? Revenue { get; set; }
 
         [Url]
         public string ImdbUrl { get; set; }
+        
         [Url]
         public string TmdbUrl { get; set; }
+        
         [Required]
         [Url]
         public string PosterUrl { get; set; }
+
         [Required]
         [Url]
         public string BackdropUrl { get; set; }
@@ -39,6 +46,8 @@ namespace ApplicationCore.Models.Request
         public DateTime? ReleaseDate { get; set; }
         public int? RunTime { get; set; }
 
+        [Required]
+        [DataType(DataType.Currency)]
         public decimal? Price { get; set; }
 
         public List<GenreResponseModel> Genres { get; set; }

@@ -3,7 +3,7 @@
 @model ApplicationCore.Models.Response.MovieDetailsResponseModel
 
     <style>
-        /**/
+        /*Reference: https://github.com/Reddy57/MovieShop */
         .bg-image {
             height: 28.1rem;
             width: 100%;
@@ -175,12 +175,8 @@
 
     <div class="col-4 offset-1">
         <h5>CAST</h5>
-
         <table class="table">
-
             <tbody>
-
-
                 @foreach (var cast in Model?.Casts)
                 {
                 <tr>
@@ -191,11 +187,8 @@
                     <td> @cast.Character</td>
                 </tr>
                 }
-
-
             </tbody>
         </table>
-
     </div>
 </div>
 

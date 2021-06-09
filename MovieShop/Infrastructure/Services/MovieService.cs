@@ -39,7 +39,7 @@ namespace Infrastructure.Services
 
         public async Task<MovieDetailsResponseModel> GetMovieDetailsById(int id)
         {
-            // get the movie by id
+            // get the movie with genres and casts by id
             var movie = await _movieRepository.GetMovieDetailsById(id);
 
             var genreList = new List<GenreResponseModel>();
