@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicationCore.Models.Request;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,16 @@ namespace MovieShop.MVC.Controllers
     public class AdminController : Controller
     {
         [HttpGet]
-        public async Task<IActionResult> Movie()
+        public async Task<IActionResult> CreateMovie()
         {
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Purchases()
+        [HttpPost]
+        public async Task<IActionResult> CreateMovie(CreateMovieRequestModel model)
         {
             return View();
         }
+
     }
 }
