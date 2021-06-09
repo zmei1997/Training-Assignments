@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicationCore.Models.Request;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,20 @@ namespace MovieShop.MVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Register(UserRegisterRequestModel model)
+        {
+            return View();
+        }
+
         [HttpGet]
         public async Task<IActionResult> Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginRequestModel model)
         {
             return View();
         }
