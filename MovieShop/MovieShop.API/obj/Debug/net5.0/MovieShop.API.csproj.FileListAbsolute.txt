@@ -40,7 +40,6 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\bin
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\obj\Debug\net5.0\MovieShop.API.csproj.AssemblyReference.cache
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\obj\Debug\net5.0\MovieShop.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\obj\Debug\net5.0\MovieShop.API.AssemblyInfoInputs.cache
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.API\obj\Debug\net5.0\MovieShop.API.AssemblyInfo.cs

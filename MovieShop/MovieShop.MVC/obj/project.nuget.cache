@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OwCTlkKuIeq4dehAL4gD1rUTJUrJ3D+1E8ujzWZhNCkaHZTeJ14i4tIt75/YIgxezA9dvzeLjVpUsnMBCsFGcQ==",
+  "dgSpecHash": "KYIiDajXL4ammjY/SIvHpvQ6IpVy3mjiDmMqef1DUIkLuLYx5SdKuWIAFaNjBpMc7HXxnoMpH2I8fz/vASvo/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\MovieShop.MVC\\MovieShop.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\15821\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\15821\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.7\\microsoft.aspnetcore.cryptography.internal.5.0.7.nupkg.sha512",
+    "C:\\Users\\15821\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.7\\microsoft.aspnetcore.cryptography.keyderivation.5.0.7.nupkg.sha512",
     "C:\\Users\\15821\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\15821\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\15821\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",

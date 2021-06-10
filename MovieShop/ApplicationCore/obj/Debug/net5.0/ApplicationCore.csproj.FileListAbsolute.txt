@@ -14,7 +14,6 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\b
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\bin\Debug\net5.0\ApplicationCore.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\bin\Debug\net5.0\ref\ApplicationCore.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\bin\Debug\net5.0\ApplicationCore.pdb
-C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.AssemblyReference.cache
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\obj\Debug\net5.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfoInputs.cache
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfo.cs

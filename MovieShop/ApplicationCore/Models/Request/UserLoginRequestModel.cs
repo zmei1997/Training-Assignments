@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Models.Request
 {
-    public class LoginRequestModel
+    public class UserLoginRequestModel
     {
         [Required]
         [EmailAddress]

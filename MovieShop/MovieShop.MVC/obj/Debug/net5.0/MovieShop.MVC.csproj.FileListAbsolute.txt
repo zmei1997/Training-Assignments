@@ -300,3 +300,5 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Admin\CreateMovie.cshtml.g.cs
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
