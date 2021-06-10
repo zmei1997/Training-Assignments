@@ -25,4 +25,8 @@
     <ProjectReference Include="..\MovieShop.API\MovieShop.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\User\" />
+  </ItemGroup>
+
 </Project>

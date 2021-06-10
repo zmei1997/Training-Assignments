@@ -4,44 +4,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApplicationCore.ServiceInterfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MovieShop.MVC.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        private readonly ICurrentUserService _currentUserService;
+
+        public UserController(ICurrentUserService currentUserService)
         {
-            _userService = userService;
+            _currentUserService = currentUserService;
         }
 
+        [Authorize]
         [HttpGet]
-        public async Task<IActionResult> Purchase()
+        public async Task<IActionResult> GetUserPurchasedMovies()
         {
+
+            var userId = _currentUserService.UserId;
+            // get the user id
+            //
+            // make a request to the database and get info from Purchase Table 
+            // select * from Purchase where userid = @getfromcookie
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Favorite()
-        {
-            return View();
-        }
 
-        [HttpGet]
-        public async Task<IActionResult> Unfavorite()
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> PurchaseMovie()
         {
-            return View();
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Review()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Movie()
-        {
+            // get userid from CurrentUser and create a row in Purchase Table
             return View();
         }
     }
