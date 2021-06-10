@@ -11,28 +11,5 @@ namespace MovieShop.API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetAccountById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost]
-        public IActionResult PostAccount()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetAccount()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost]
-        public IActionResult Login()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -11,22 +11,5 @@ namespace MovieShop.API.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult PostMovie()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPut]
-        public IActionResult UpdateMovie()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetPurchases()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

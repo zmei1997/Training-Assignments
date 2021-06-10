@@ -11,40 +11,5 @@ namespace MovieShop.API.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetMovies()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetMoviesById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetMoviesTopRated()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetMoviesTopRevenue()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetMoviesGenre(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public IActionResult GetMoviesReviews(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
