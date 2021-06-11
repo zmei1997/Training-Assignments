@@ -19,7 +19,7 @@ namespace Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public virtual async Task<T> GetById(int id)
+        public virtual async Task<T> GetByIdAsync(int id)
         {
             var entity = await _dbContext.Set<T>().FindAsync(id);
             return entity;
@@ -45,7 +45,7 @@ namespace Infrastructure.Repositories
             return await _dbContext.Set<T>().Where(filter).AnyAsync();
         }
 
-        public virtual async Task<T> Add(T entity)
+        public virtual async Task<T> AddAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();

@@ -9,12 +9,12 @@ namespace ApplicationCore.RepositoryInterfaces
 {
     public interface IAsyncRepository<T> where T : class
     {
-        Task<T> GetById(int id);
+        Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> ListAll();
         Task<IEnumerable<T>> List(Expression<Func<T, bool>> filter);
         Task<int> GetCount(Expression<Func<T, bool>> filter);
         Task<bool> GetExists(Expression<Func<T, bool>> filter);
-        Task<T> Add(T entity);
+        Task<T> AddAsync(T entity);
         Task<T> Update(T entity);
         Task Delete(T entity);
     }

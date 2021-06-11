@@ -7,6 +7,8 @@ using ApplicationCore.ServiceInterfaces;
 using Microsoft.AspNetCore.Authorization;
 using ApplicationCore.RepositoryInterfaces;
 using ApplicationCore.Models.Response;
+using ApplicationCore.Models.Request;
+using ApplicationCore.Entities;
 
 namespace MovieShop.MVC.Controllers
 {
@@ -14,11 +16,13 @@ namespace MovieShop.MVC.Controllers
     {
         private readonly ICurrentUserService _currentUserService;
         private readonly IUserService _userService;
+        private readonly IMovieService _movieService;
 
-        public UserController(ICurrentUserService currentUserService, IUserService userService)
+        public UserController(ICurrentUserService currentUserService, IUserService userService, IMovieService movieService)
         {
             _currentUserService = currentUserService;
             _userService = userService;
+            _movieService = movieService;
         }
 
         [Authorize]
@@ -35,13 +39,21 @@ namespace MovieShop.MVC.Controllers
             return View(purchasedMovies);
         }
 
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> PurchaseMovie(int id)
+        {
+            var purchasedMovieDetail = await _movieService.GetMovieDetailsById(id);
+            return View(purchasedMovieDetail);
+        }
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> PurchaseMovie()
+        public async Task<IActionResult> PurchaseMovie(UserPurchaseMovieRequestModel model)
         {
             // get userid from CurrentUser and create a row in Purchase Table
-            return View();
+            await _userService.AddPurchasedMovie(model);
+            return LocalRedirect("~/User/GetUserPurchasedMovies");
         }
     }
 }

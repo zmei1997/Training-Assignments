@@ -1,4 +1,5 @@
-﻿using ApplicationCore.Models.Request;
+﻿using ApplicationCore.Entities;
+using ApplicationCore.Models.Request;
 using ApplicationCore.Models.Response;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,11 @@ namespace ApplicationCore.ServiceInterfaces
         // EditUser
         // Change Password
         // Purchase Movie
-        Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId);
+        Task AddPurchasedMovie(UserPurchaseMovieRequestModel model);
         // Favorite Movie
         // Add Review
         // Get All Purchased Movies
+        Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId);
         // Get All Favorited Movies
         // Edit Review
         // Remove Favorite

@@ -17,11 +17,15 @@ namespace Infrastructure.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IPurchaseRepository _purchaseRepository;
+        private readonly IMovieRepository _movieRepository;
+        private readonly ICurrentUserService _currentUserService;
 
-        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository)
+        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IMovieRepository movieRepository, ICurrentUserService currentUserService)
         {
             _userRepository = userRepository;
             _purchaseRepository = purchaseRepository;
+            _movieRepository = movieRepository;
+            _currentUserService = currentUserService;
         }
 
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel userRegisterRequestModel)
@@ -52,7 +56,7 @@ namespace Infrastructure.Services
                 HashedPassword = hashedPassword
             };
 
-            var createdUser = await _userRepository.Add(user);
+            var createdUser = await _userRepository.AddAsync(user);
 
             // convert the returned user entity to UserRegisterResponseModel
 
@@ -132,6 +136,22 @@ namespace Infrastructure.Services
                 });
             }
             return puchasedMovieCardList;
+        }
+
+        public async Task AddPurchasedMovie(UserPurchaseMovieRequestModel model)
+        {
+            var userId = _currentUserService.UserId;
+            var movieDetail = await _movieRepository.GetByIdAsync(model.Id);
+            var purchase = new Purchase
+            {
+                UserId = userId,
+                PurchaseNumber = Guid.NewGuid(),
+                TotalPrice = movieDetail.Price.Value,
+                PurchaseDateTime = DateTime.Now,
+                MovieId = movieDetail.Id
+            };
+
+            await _purchaseRepository.AddAsync(purchase);
         }
     }
 }
