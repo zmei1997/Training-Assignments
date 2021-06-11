@@ -16,10 +16,12 @@ namespace Infrastructure.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IPurchaseRepository _purchaseRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository)
         {
             _userRepository = userRepository;
+            _purchaseRepository = purchaseRepository;
         }
 
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel userRegisterRequestModel)
@@ -112,6 +114,24 @@ namespace Infrastructure.Services
         {
             var hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(password, Convert.FromBase64String(salt), KeyDerivationPrf.HMACSHA512, 10000, 256 / 8));
             return hashed;
+        }
+
+        public async Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId)
+        {
+            var purchases = await _purchaseRepository.GetPurchasesByUserId(userId);
+
+            var puchasedMovieCardList = new List<MovieCardResponseModel>();
+            foreach (var purchase in purchases)
+            {
+                puchasedMovieCardList.Add(new MovieCardResponseModel
+                {
+                    Id = purchase.Movie.Id,
+                    PosterUrl = purchase.Movie.PosterUrl,
+                    ReleaseDate = purchase.Movie.ReleaseDate.GetValueOrDefault(),
+                    Title = purchase.Movie.Title
+                });
+            }
+            return puchasedMovieCardList;
         }
     }
 }

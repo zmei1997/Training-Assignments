@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 using ApplicationCore.ServiceInterfaces;
 using Microsoft.AspNetCore.Authorization;
 using ApplicationCore.RepositoryInterfaces;
+using ApplicationCore.Models.Response;
 
 namespace MovieShop.MVC.Controllers
 {
     public class UserController : Controller
     {
         private readonly ICurrentUserService _currentUserService;
-        private readonly IPurchaseRepository _purchaseRepository;
+        private readonly IUserService _userService;
 
-        public UserController(ICurrentUserService currentUserService, IPurchaseRepository purchaseRepository)
+        public UserController(ICurrentUserService currentUserService, IUserService userService)
         {
             _currentUserService = currentUserService;
-            _purchaseRepository = purchaseRepository;
+            _userService = userService;
         }
 
         [Authorize]
@@ -30,9 +31,8 @@ namespace MovieShop.MVC.Controllers
             //
             // make a request to the database and get info from Purchase Table 
             // select * from Purchase where userid = @getfromcookie
-            var purchases = _purchaseRepository.GetPurchasesByUserId(userId);
-
-            return View();
+            var purchasedMovies = await _userService.GetAllPurchasedMovies(userId);
+            return View(purchasedMovies);
         }
 
 

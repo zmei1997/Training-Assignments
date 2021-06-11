@@ -17,6 +17,7 @@ namespace ApplicationCore.ServiceInterfaces
         // EditUser
         // Change Password
         // Purchase Movie
+        Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId);
         // Favorite Movie
         // Add Review
         // Get All Purchased Movies

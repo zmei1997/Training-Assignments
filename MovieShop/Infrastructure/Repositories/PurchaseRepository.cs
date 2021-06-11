@@ -18,7 +18,7 @@ namespace Infrastructure.Repositories
 
         public async Task<IEnumerable<Purchase>> GetPurchasesByUserId(int id)
         {
-            var purchases = await _dbContext.Purchases.Where(p => p.UserId == id).ToListAsync();
+            var purchases = await _dbContext.Purchases.Where(p => p.UserId == id).Include(p => p.Movie).ToListAsync();
             return purchases;
         }
     }
