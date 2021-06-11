@@ -141,14 +141,14 @@ namespace Infrastructure.Services
         public async Task AddPurchasedMovie(UserPurchaseMovieRequestModel model)
         {
             var userId = _currentUserService.UserId;
-            var movieDetail = await _movieRepository.GetByIdAsync(model.Id);
+            var movieDetail = await _movieRepository.GetByIdAsync(model.MovieId);
             var purchase = new Purchase
             {
                 UserId = userId,
-                PurchaseNumber = Guid.NewGuid(),
+                PurchaseNumber = model.PurchaseNumber,
                 TotalPrice = movieDetail.Price.Value,
-                PurchaseDateTime = DateTime.Now,
-                MovieId = movieDetail.Id
+                PurchaseDateTime = model.PurchaseDateTime,
+                MovieId = model.MovieId
             };
 
             await _purchaseRepository.AddAsync(purchase);

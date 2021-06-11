@@ -49,8 +49,9 @@ namespace MovieShop.MVC.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> PurchaseMovie(UserPurchaseMovieRequestModel model)
+        public async Task<IActionResult> PurchaseMovie(int id, UserPurchaseMovieRequestModel model)
         {
+            model.MovieId = id;
             // get userid from CurrentUser and create a row in Purchase Table
             await _userService.AddPurchasedMovie(model);
             return LocalRedirect("~/User/GetUserPurchasedMovies");

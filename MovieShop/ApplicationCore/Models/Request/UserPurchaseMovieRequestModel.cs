@@ -14,7 +14,6 @@ namespace ApplicationCore.Models.Request
             PurchaseNumber = Guid.NewGuid();
         }
 
-        public int Id { get; set; }
         public int UserId { get; set; }
         public Guid PurchaseNumber { get; set; }
         public decimal TotalPrice { get; set; }
