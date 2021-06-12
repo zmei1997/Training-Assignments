@@ -10,6 +10,7 @@ using ApplicationCore.RepositoryInterfaces;
 using ApplicationCore.Entities;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using ApplicationCore.Exceptions;
 
 namespace Infrastructure.Services
 {
@@ -36,7 +37,7 @@ namespace Infrastructure.Services
 
             if (dbUser != null)
                 // email exists in db
-                throw new Exception("User already exists, please try to login");
+                throw new ConflictException("User already exists, please try to login");
 
             // generate a unique Salt
             var salt = CreateSalt();
