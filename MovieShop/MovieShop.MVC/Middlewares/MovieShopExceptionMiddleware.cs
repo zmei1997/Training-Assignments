@@ -2,11 +2,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using System.Net.Mail;
+using System.Text;
 
 namespace MovieShop.MVC.Middlewares
 {
@@ -64,7 +67,37 @@ namespace MovieShop.MVC.Middlewares
             };
 
             // Log above object with Serilog
+            Log.Logger = new LoggerConfiguration()
+                    .MinimumLevel.Information()
+                    .WriteTo.Console()
+                    .WriteTo.File("Log/ExceptionLog.txt", rollingInterval: RollingInterval.Day, rollOnFileSizeLimit: true)
+                    .CreateLogger();
+
+            Log.Information($"Exception Message: {errorResponse.ExceptionMessage}, InnerException Message: {errorResponse.InnerExceptionMessage}, Exception happened on {DateTime.Now}, StackTrace Of Exception {errorResponse.ExceptionStackStrace}");
+            Log.CloseAndFlush();
+
             // send email to the Dev Team
+            var EmailId = ""; // Type Email Id here
+            var Password = ""; // Type Password here
+            string to = "stephenmei1997@gmail.com"; //To address
+            string from = "stephenmei1997@gmail.com"; //From address
+            MailMessage message = new MailMessage(from, to);
+
+            string mailbody = "Testing: Exception Messasge\n" +
+                "Exception Message: {errorResponse.ExceptionMessage},\n" +
+                "InnerException Message: {errorResponse.InnerExceptionMessage},\n" +
+                "Exception happened on {DateTime.Now},\nStackTrace Of Exception {errorResponse.ExceptionStackStrace}";
+            message.Subject = "[Testing] Send exception messages to Dev team";
+            message.Body = mailbody;
+            message.BodyEncoding = Encoding.UTF8;
+            message.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            System.Net.NetworkCredential basicCredential1 = new
+            System.Net.NetworkCredential(EmailId, Password);
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = basicCredential1;
+            client.Send(message);
 
             _logger.LogError("Exception Message: {0}", errorResponse.ExceptionMessage);
             _logger.LogError("Exception happened on {0}", DateTime.Now);
