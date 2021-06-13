@@ -2,6 +2,7 @@
 using ApplicationCore.ServiceInterfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace MovieShop.MVC.Controllers
     public class AccountController : Controller
     {
         private readonly IUserService _userService;
+        private readonly ICurrentUserService _currentUserService;
 
-        public AccountController(IUserService userService)
+        public AccountController(IUserService userService, ICurrentUserService currentUserService)
         {
             _userService = userService;
+            _currentUserService = currentUserService;
         }
 
         [HttpGet]
@@ -94,6 +97,30 @@ namespace MovieShop.MVC.Controllers
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ViewProfile()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditProfile()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostEditProfile()
+        {
+            var userProfile = new UserProfileRequestModel()
+            {
+                Id = _currentUserService.UserId,
+                FullName = _currentUserService.FullName
+            };
+
+            return View();
         }
     }
 }

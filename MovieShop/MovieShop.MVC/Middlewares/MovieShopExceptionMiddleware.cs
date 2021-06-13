@@ -76,28 +76,35 @@ namespace MovieShop.MVC.Middlewares
             Log.Information($"Exception Message: {errorResponse.ExceptionMessage}, InnerException Message: {errorResponse.InnerExceptionMessage}, Exception happened on {DateTime.Now}, StackTrace Of Exception {errorResponse.ExceptionStackStrace}");
             Log.CloseAndFlush();
 
-            // send email to the Dev Team
-            var EmailId = ""; // Type Email Id here
-            var Password = ""; // Type Password here
-            string to = "stephenmei1997@gmail.com"; //To address
-            string from = "stephenmei1997@gmail.com"; //From address
-            MailMessage message = new MailMessage(from, to);
+            //// send email to the Dev Team
+            //var EmailId = ""; // Type Email Id here
+            //var Password = ""; // Type Password here
+            //string to = "stephenmei1997@gmail.com"; //To address
+            //string from = "stephenmei1997@gmail.com"; //From address
+            //MailMessage message = new MailMessage(from, to);
 
-            string mailbody = "Testing: Exception Messasge\n" +
-                "Exception Message: {errorResponse.ExceptionMessage},\n" +
-                "InnerException Message: {errorResponse.InnerExceptionMessage},\n" +
-                "Exception happened on {DateTime.Now},\nStackTrace Of Exception {errorResponse.ExceptionStackStrace}";
-            message.Subject = "[Testing] Send exception messages to Dev team";
-            message.Body = mailbody;
-            message.BodyEncoding = Encoding.UTF8;
-            message.IsBodyHtml = true;
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
-            System.Net.NetworkCredential basicCredential1 = new
-            System.Net.NetworkCredential(EmailId, Password);
-            client.EnableSsl = true;
-            client.UseDefaultCredentials = false;
-            client.Credentials = basicCredential1;
-            client.Send(message);
+            //string mailbody = "Testing: Exception Messasge\n" +
+            //    "Exception Message: {errorResponse.ExceptionMessage},\n" +
+            //    "InnerException Message: {errorResponse.InnerExceptionMessage},\n" +
+            //    "Exception happened on {DateTime.Now},\nStackTrace Of Exception {errorResponse.ExceptionStackStrace}";
+            //message.Subject = "[Testing] Send exception messages to Dev team";
+            //message.Body = mailbody;
+            //message.BodyEncoding = Encoding.UTF8;
+            //message.IsBodyHtml = true;
+            //SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            //System.Net.NetworkCredential basicCredential1 = new
+            //System.Net.NetworkCredential(EmailId, Password);
+            //client.EnableSsl = true;
+            //client.UseDefaultCredentials = false;
+            //client.Credentials = basicCredential1;
+            //try
+            //{
+            //    client.Send(message);
+            //}
+            //catch (Exception em)
+            //{
+            //    throw new Exception("Email Authorization failed.");
+            //}
 
             _logger.LogError("Exception Message: {0}", errorResponse.ExceptionMessage);
             _logger.LogError("Exception happened on {0}", DateTime.Now);

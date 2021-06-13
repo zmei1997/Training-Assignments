@@ -1,8 +1,8 @@
 ﻿@model ApplicationCore.Models.Response.MovieDetailsResponseModel
 
 <script>
-    function PurchasedSuccessfully() {
-        alert("Thanks for purchase!\n\nRedirecting to your purchased movies.")
+    function Processing() {
+        alert("Processing\nRedirecting to your purchased movies.")
     }
 </script>
 
@@ -24,7 +24,7 @@
                             $@Model.Price
                         </div>
                         <div class="col-12">
-                            <input type="submit" value="Confirm Purchase" class="btn btn-primary btn-lg btn-block" onclick="PurchasedSuccessfully()"/>
+                            <input type="submit" value="Confirm Purchase" class="btn btn-primary btn-lg btn-block" onclick="Processing()"/>
                         </div>
 
                     </div>

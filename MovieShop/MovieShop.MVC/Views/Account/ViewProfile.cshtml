@@ -1,0 +1,15 @@
+﻿@using ApplicationCore.ServiceInterfaces
+@inject ICurrentUserService CurrentUserService
+
+<h2>
+    Your Profile
+</h2>
+
+<hr />
+
+<h3>
+    User Name: @CurrentUserService.FullName
+</h3>
+<h3>
+    User Email: @CurrentUserService.Email
+</h3>

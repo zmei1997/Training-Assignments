@@ -304,3 +304,8 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\EditProfile.cshtml.g.cs
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Account\ViewProfile.cshtml.g.cs

@@ -12,8 +12,8 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" asp-controller="User" asp-action="GetUserPurchasedMovies">Library (MyMoviesCount)</a>
             <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Log Out</a>
-            <a class="dropdown-item" href="#">View Profile</a>
-            <a class="dropdown-item" href="#">Edit Profile</a>
+            <a class="dropdown-item" asp-controller="Account" asp-action="ViewProfile">View Profile</a>
+            <a class="dropdown-item" asp-controller="Account" asp-action="EditProfile">Edit Profile</a>
         </div>
     </div>
 }

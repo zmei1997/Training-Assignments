@@ -25,22 +25,22 @@ namespace Infrastructure.Repositories
             return entity;
         }
 
-        public virtual async Task<IEnumerable<T>> ListAll()
+        public virtual async Task<IEnumerable<T>> ListAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> List(Expression<Func<T, bool>> filter)
+        public async Task<IEnumerable<T>> ListAsync(Expression<Func<T, bool>> filter)
         {
             return await _dbContext.Set<T>().Where(filter).ToListAsync();
         }
 
-        public async Task<int> GetCount(Expression<Func<T, bool>> filter)
+        public async Task<int> GetCountAsync(Expression<Func<T, bool>> filter)
         {
             return await _dbContext.Set<T>().Where(filter).CountAsync();
         }
 
-        public async Task<bool> GetExists(Expression<Func<T, bool>> filter)
+        public async Task<bool> GetExistsAsync(Expression<Func<T, bool>> filter)
         {
             return await _dbContext.Set<T>().Where(filter).AnyAsync();
         }
@@ -52,12 +52,12 @@ namespace Infrastructure.Repositories
             return entity;
         }
 
-        public virtual async Task<T> Update(T entity)
+        public virtual async Task<T> UpdateAsync(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task Delete(T entity)
+        public virtual Task DeleteAsync(T entity)
         {
             throw new NotImplementedException();
         }

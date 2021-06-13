@@ -152,6 +152,11 @@ namespace Infrastructure.Services
                 MovieId = model.MovieId
             };
 
+            if (await _purchaseRepository.GetExistsAsync(p =>p.UserId == purchase.UserId && p.MovieId == purchase.MovieId))
+            {
+                throw new ConflictException("Movie already Purchased");
+            }
+
             await _purchaseRepository.AddAsync(purchase);
         }
     }
