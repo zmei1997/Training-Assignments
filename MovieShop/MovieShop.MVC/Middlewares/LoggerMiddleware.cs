@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Serilog;
+using Serilog.Formatting.Compact;
 
 namespace MovieShop.MVC.Middlewares
 {
@@ -49,6 +51,15 @@ namespace MovieShop.MVC.Middlewares
 
                 _logger.LogInformation("Email Address {0}", email);
                 _logger.LogInformation("Name: {0} ", fullname);
+
+                Log.Logger = new LoggerConfiguration()
+                    .MinimumLevel.Information()
+                    .WriteTo.Console()
+                    .WriteTo.File("Log/log.txt", rollingInterval: RollingInterval.Day, rollOnFileSizeLimit: true)
+                    .CreateLogger();
+
+                Log.Information($"Date Time the request came: {datetime.ToString()}, Ip Address Of User: {ipAddress}, Email Address {email}, Name: {fullname}");
+                Log.CloseAndFlush();
             }
 
 

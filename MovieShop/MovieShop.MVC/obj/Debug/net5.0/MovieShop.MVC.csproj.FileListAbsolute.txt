@@ -300,3 +300,7 @@ C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginInfoPartial.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\GetUserPurchasedMovies.cshtml.g.cs
 C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\obj\Debug\net5.0\Razor\Views\User\PurchaseMovie.cshtml.g.cs
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Users\15821\Documents\GitHub\Training-Assignments\MovieShop\MovieShop.MVC\bin\Debug\net5.0\Serilog.Sinks.File.dll
