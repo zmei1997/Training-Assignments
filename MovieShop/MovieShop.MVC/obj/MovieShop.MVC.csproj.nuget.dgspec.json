@@ -234,7 +234,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
+              },
+              "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\15821\\Documents\\GitHub\\Training-Assignments\\MovieShop\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
