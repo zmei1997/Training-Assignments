@@ -2050,6 +2050,8 @@
       },
       "MovieShop.API/1.0.0": {
         "dependencies": {
+          "ApplicationCore": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",

@@ -159,5 +159,27 @@ namespace Infrastructure.Services
 
             await _purchaseRepository.AddAsync(purchase);
         }
+
+        public async Task<UserRegisterResponseModel> GetUserDetails(int id)
+        {
+            var user = await _userRepository.GetByIdAsync(id);
+            if (user == null)
+            {
+                throw new NotFoundException("User");
+            }
+            var userRegisterModel = new UserRegisterResponseModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName
+            };
+            return userRegisterModel;
+        }
+
+        public async Task<User> GetUser(string email)
+        {
+            return await _userRepository.GetUserByEmail(email);
+        }
     }
 }

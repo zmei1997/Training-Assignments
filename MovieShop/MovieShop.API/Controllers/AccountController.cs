@@ -34,5 +34,32 @@ namespace MovieShop.API.Controllers
             // 400
             return BadRequest("Please check the data you entered");
         }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IActionResult> GetUserById(int id)
+        {
+            var user = await _userService.GetUserDetails(id);
+            return Ok(user);
+        }
+
+        [HttpGet]
+        [Route("")]
+        public async Task<ActionResult> EmailExists([FromQuery] string email)
+        {
+            var user = await _userService.GetUser(email);
+            return Ok(user == null ? new { emailExists = false } : new { emailExists = true });
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<ActionResult> LoginAsync([FromBody] UserLoginRequestModel loginRequest)
+        {
+            var user = await _userService.Login(loginRequest.Email, loginRequest.Password);
+            if (user == null) 
+                return Unauthorized();
+
+            return Ok(user);
+        }
     }
 }
