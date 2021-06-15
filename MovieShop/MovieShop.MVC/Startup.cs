@@ -54,6 +54,8 @@ namespace MovieShop.MVC
 
             services.AddScoped<IReviewRepository, ReviewRepository>();
 
+            services.AddScoped<IFavoriteRepository, FavoriteRepository>();
+
             services.AddDbContext<MovieShopDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"));

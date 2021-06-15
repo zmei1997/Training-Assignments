@@ -21,14 +21,18 @@ namespace Infrastructure.Services
         private readonly IMovieRepository _movieRepository;
         private readonly ICurrentUserService _currentUserService;
         private readonly IReviewRepository _reviewRepository;
+        private readonly IFavoriteRepository _favoriteRepository;
 
-        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IMovieRepository movieRepository, ICurrentUserService currentUserService, IReviewRepository reviewRepository)
+        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, 
+            IMovieRepository movieRepository, ICurrentUserService currentUserService, 
+            IReviewRepository reviewRepository, IFavoriteRepository favoriteRepository)
         {
             _userRepository = userRepository;
             _purchaseRepository = purchaseRepository;
             _movieRepository = movieRepository;
             _currentUserService = currentUserService;
-            _reviewRepository = reviewRepository;       
+            _reviewRepository = reviewRepository;
+            _favoriteRepository = favoriteRepository;
         }
 
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel userRegisterRequestModel)
@@ -200,6 +204,85 @@ namespace Infrastructure.Services
                 });
             }
             return userReviewList;
+        }
+
+        public async Task<IEnumerable<MovieCardResponseModel>> GetFavoritesByUserId(int id)
+        {
+            var favorites = await _favoriteRepository.GetFavoritesByUserId(id);
+            var favoriteMovieCardList = new List<MovieCardResponseModel>();
+            foreach (var favorite in favorites)
+            {
+                favoriteMovieCardList.Add(new MovieCardResponseModel
+                {
+                    Id = favorite.Movie.Id,
+                    PosterUrl = favorite.Movie.PosterUrl,
+                    ReleaseDate = favorite.Movie.ReleaseDate.GetValueOrDefault(),
+                    Title = favorite.Movie.Title
+                });
+            }
+            return favoriteMovieCardList;
+
+        }
+
+        public async Task AddFavorite(UserFavoriteRequestModel model)
+        {
+            var favorite = new Favorite
+            {
+                UserId = model.UserId,
+                MovieId = model.MovieId
+            };
+
+            await _favoriteRepository.AddAsync(favorite);
+        }
+
+        public async Task RemoveFavorite(UserFavoriteRequestModel model)
+        {
+            var favorite = new Favorite
+            {
+                UserId = model.UserId,
+                MovieId = model.MovieId
+            };
+
+            await _favoriteRepository.DeleteAsync(favorite);
+        }
+
+        public async Task<bool> FavoriteExists(int id, int movieId)
+        {
+            return await _favoriteRepository.GetExistsAsync(f => f.MovieId == movieId && f.UserId == id);
+        }
+
+        public async Task AddReview(UserReviewRequestModel model)
+        {
+            var review = new Review
+            {
+                UserId = model.UserId,
+                MovieId = model.MovieId,
+                Rating = model.Rating,
+                ReviewText = model.ReviewText,
+                CreatedDate = DateTime.Now
+            };
+
+            await _reviewRepository.AddAsync(review);
+        }
+
+        public async Task UpdateReview(UserReviewRequestModel model)
+        {
+            var review = new Review
+            {
+                UserId = model.UserId,
+                MovieId = model.MovieId,
+                Rating = model.Rating,
+                ReviewText = model.ReviewText,
+                CreatedDate = DateTime.Now
+            };
+
+            await _reviewRepository.UpdateAsync(review);
+        }
+
+        public async Task DeleteReview(int userId, int movieId)
+        {
+            var review = await _reviewRepository.ListAsync(r => r.UserId == userId && r.MovieId == movieId);
+            await _reviewRepository.DeleteAsync(review.First());
         }
     }
 }

@@ -29,5 +29,12 @@ namespace ApplicationCore.ServiceInterfaces
         Task<UserRegisterResponseModel> GetUserDetails(int id);
         Task<User> GetUser(string email);
         Task<IEnumerable<UserReviewsResponseModel>> GetReviewsByUserId(int id);
+        Task AddReview(UserReviewRequestModel model);
+        Task UpdateReview(UserReviewRequestModel model);
+        Task DeleteReview(int userId, int movieId);
+        Task<IEnumerable<MovieCardResponseModel>> GetFavoritesByUserId(int id);
+        Task AddFavorite(UserFavoriteRequestModel model);
+        Task RemoveFavorite(UserFavoriteRequestModel model);
+        Task<bool> FavoriteExists(int id, int movieId);
     }
 }
