@@ -11,23 +11,23 @@ namespace ApplicationCore.ServiceInterfaces
 {
     public interface IUserService
     {
+        // delete
+        // EditUser
+        // Change Password
+        //// Purchase Movie 
+        // Favorite Movie
+        // Add Review
+        //// Get All Purchased Movies
+        // Get All Favorited Movies
+        // Edit Review
+        // Remove Favorite
+        //// Get User Details
+        Task AddPurchasedMovie(UserPurchaseMovieRequestModel model);
+        Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId);
         Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel userRegisterRequestModel);
         Task<UserLoginResponseModel> Login(string email, string password);
         Task<UserRegisterResponseModel> GetUserDetails(int id);
         Task<User> GetUser(string email);
-        // delete
-        // EditUser
-        // Change Password
-        // Purchase Movie
-        Task AddPurchasedMovie(UserPurchaseMovieRequestModel model);
-        // Favorite Movie
-        // Add Review
-        // Get All Purchased Movies
-        Task<List<MovieCardResponseModel>> GetAllPurchasedMovies(int userId);
-        // Get All Favorited Movies
-        // Edit Review
-        // Remove Favorite
-        // Get User Details
-        // 
+        Task<IEnumerable<UserReviewsResponseModel>> GetReviewsByUserId(int id);
     }
 }

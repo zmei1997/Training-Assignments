@@ -20,13 +20,15 @@ namespace Infrastructure.Services
         private readonly IPurchaseRepository _purchaseRepository;
         private readonly IMovieRepository _movieRepository;
         private readonly ICurrentUserService _currentUserService;
+        private readonly IReviewRepository _reviewRepository;
 
-        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IMovieRepository movieRepository, ICurrentUserService currentUserService)
+        public UserService(IUserRepository userRepository, IPurchaseRepository purchaseRepository, IMovieRepository movieRepository, ICurrentUserService currentUserService, IReviewRepository reviewRepository)
         {
             _userRepository = userRepository;
             _purchaseRepository = purchaseRepository;
             _movieRepository = movieRepository;
             _currentUserService = currentUserService;
+            _reviewRepository = reviewRepository;       
         }
 
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel userRegisterRequestModel)
@@ -180,6 +182,24 @@ namespace Infrastructure.Services
         public async Task<User> GetUser(string email)
         {
             return await _userRepository.GetUserByEmail(email);
+        }
+
+        public async Task<IEnumerable<UserReviewsResponseModel>> GetReviewsByUserId(int id)
+        {
+            var userReviews = await _reviewRepository.GetReviewsByUserId(id);
+            var userReviewList = new List<UserReviewsResponseModel>();
+            foreach (var review in userReviews)
+            {
+                userReviewList.Add(new UserReviewsResponseModel
+                {
+                    UserId = review.UserId,
+                    MovieId = review.MovieId,
+                    ReviewText = review.ReviewText,
+                    Rating = review.Rating,
+                    CreatedDate = review.CreatedDate
+                });
+            }
+            return userReviewList;
         }
     }
 }

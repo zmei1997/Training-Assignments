@@ -57,6 +57,8 @@ namespace MovieShop.API
             // Purchase
             services.AddScoped<IPurchaseRepository, PurchaseRepository>();
 
+            services.AddScoped<IReviewRepository, ReviewRepository>();
+
             services.AddHttpContextAccessor();
 
             services.AddControllers();
