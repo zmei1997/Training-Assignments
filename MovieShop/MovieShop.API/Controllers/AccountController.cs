@@ -6,6 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApplicationCore.ServiceInterfaces;
 using ApplicationCore.Models.Request;
+using ApplicationCore.Models.Response;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace MovieShop.API.Controllers
 {
@@ -14,10 +20,12 @@ namespace MovieShop.API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IConfiguration _configuration;
 
-        public AccountController(IUserService userService)
+        public AccountController(IUserService userService, IConfiguration configuration)
         {
             _userService = userService;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -53,13 +61,65 @@ namespace MovieShop.API.Controllers
 
         [HttpPost]
         [Route("login")]
-        public async Task<ActionResult> LoginAsync([FromBody] UserLoginRequestModel loginRequest)
+        public async Task<IActionResult> Login(UserLoginRequestModel model)
         {
-            var user = await _userService.Login(loginRequest.Email, loginRequest.Password);
-            if (user == null) 
+            // check un/pw is correct
+            var user = await _userService.Login(model.Email, model.Password);
+            if (user == null)
+            {
                 return Unauthorized();
+            }
 
-            return Ok(user);
+            var jwt = CreateJWT(user);
+            // user entered correct password
+            // we create a token JWT which includes the user information and send it to Angular application
+
+            return Ok(new { token = jwt });
+        }
+
+
+        private string CreateJWT(UserLoginResponseModel model)
+        {
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.GivenName, model.FirstName),
+                new Claim(JwtRegisteredClaimNames.FamilyName, model.LastName),
+                new Claim(JwtRegisteredClaimNames.Email, model.Email)
+            };
+
+            // create identity object and store above claims
+            var identityClaims = new ClaimsIdentity();
+            identityClaims.AddClaims(claims);
+
+            // read the secret key from the app.settings.json, make sure secret key is unique and non guessable
+            // In real world we dont store these secret keys in appsettings, we use something like Azure KeyVault
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["MovieShopSecretKey"]));
+
+            //pick a builtin algorithm for hashing
+
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+
+            // establish the expiration time for the token
+
+            var expires = DateTime.Now.AddDays(_configuration.GetValue<int>("ExpirationDuration"));
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            // create a object that's gonna store all the above information
+
+            var tokenObject = new SecurityTokenDescriptor()
+            {
+                Subject = identityClaims,
+                Expires = expires,
+                SigningCredentials = credentials,
+                Issuer = _configuration["MovieShopIssuer"],
+                Audience = _configuration["MovieShopAudience"]
+            };
+
+            var encodedJwt = tokenHandler.CreateToken(tokenObject);
+            return tokenHandler.WriteToken(encodedJwt);
         }
     }
 }

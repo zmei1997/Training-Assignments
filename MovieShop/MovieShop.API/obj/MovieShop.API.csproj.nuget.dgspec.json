@@ -83,6 +83,10 @@
             "Serilog.Sinks.File": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [
@@ -187,6 +191,10 @@
             "Serilog.Sinks.File": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [
@@ -297,6 +305,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.1.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [
