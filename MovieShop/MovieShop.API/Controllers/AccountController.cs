@@ -61,7 +61,7 @@ namespace MovieShop.API.Controllers
 
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login(UserLoginRequestModel model)
+        public async Task<IActionResult> Login([FromBody] UserLoginRequestModel model)
         {
             // check un/pw is correct
             var user = await _userService.Login(model.Email, model.Password);

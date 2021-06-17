@@ -15,22 +15,27 @@ namespace MovieShop.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly ICurrentUserService _currentUserService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, ICurrentUserService currentUserService)
         {
             _userService = userService;
+            _currentUserService = currentUserService;
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id:int}/purchases")]
         public async Task<IActionResult> GetUserPurchaseByUserId(int id)
         {
-            var purchases = await _userService.GetAllPurchasedMovies(id);
-            if (purchases.Any())
+            if (_currentUserService.UserId != id)
             {
-                return Ok(purchases);
+                return Unauthorized("please send correct id");
             }
-            return NotFound("no purchase found");
+
+            // we need to check if the client who is calling this method is sending a valid token
+            var purchases = await _userService.GetAllPurchasedMovies(id);
+            return Ok(purchases);
         }
 
         [HttpPost]
