@@ -13,8 +13,6 @@ export class MovieDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private movieService: MovieService) { }
 
   id!: number;
-
-  @Input()
   movieDetails!: MovieDetails;
 
   ngOnInit(): void {
