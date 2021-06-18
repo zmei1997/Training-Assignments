@@ -18,13 +18,15 @@
     </ul>
   </div>
   <div class="dropdown" *ngIf="isAuth">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
       {{user.given_name}} {{user.family_name}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Library</a>
+      <a class="dropdown-item" href="#">Log out</a>
+      <a class="dropdown-item" href="#">View Profile</a>
+      <a class="dropdown-item" href="#">Edit Profile</a>
     </div>
   </div>
 </nav>
