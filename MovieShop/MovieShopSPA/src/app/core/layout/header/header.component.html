@@ -24,7 +24,7 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="#">Library</a>
-      <a class="dropdown-item" href="#">Log out</a>
+      <a class="dropdown-item" (click)="logout()" [routerLink]="['/login']">Log out</a>
       <a class="dropdown-item" href="#">View Profile</a>
       <a class="dropdown-item" href="#">Edit Profile</a>
     </div>
