@@ -21,6 +21,7 @@ import { ReviewsComponent } from './user/reviews/reviews.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { LoginComponent } from './auth/login/login.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
