@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -6,6 +6,7 @@ import { User } from 'src/app/shared/models/user';
 import { UserLogin } from 'src/app/shared/models/userLogin';
 import { environment } from 'src/environments/environment';
 import { JwtHelperService } from "@auth0/angular-jwt";
+import { MovieCard } from 'src/app/shared/models/moviecard';
 
 
 @Injectable({
@@ -65,6 +66,18 @@ export class AuthenticationService {
     localStorage.removeItem('jwtToken');
     this.currentUserSubject.next({} as User);
     this.isAuthenticatedSubject.next(false);
+  }
+
+  getUserPurchasedMovies(id:number) : Observable<MovieCard[]> {
+    // set authorization header
+    var header = {
+      headers: new HttpHeaders()
+        .set('Authorization',  `Bearer ${localStorage.getItem('jwtToken')}`)
+    }
+
+    return this.http.get(`${environment.apiUrl}${'User/'}${id}${'/purchases'}`, header).pipe(
+      map(response=>response as MovieCard[])
+    );
   }
 
 }

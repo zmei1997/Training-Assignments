@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { PurchasesComponent } from './user/purchases/purchases.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: "admin/createmovie", component: CreateMovieComponent },
   { path: "admin/createcast", component: CreateCastComponent },
   { path: "genres/:id/movies", component: MovieListComponent },
-  { path: "movies/:id", component:MovieDetailsComponent }
+  { path: "movies/:id", component:MovieDetailsComponent },
+  { path: "purchases", component:PurchasesComponent }
 ];
 
 @NgModule({

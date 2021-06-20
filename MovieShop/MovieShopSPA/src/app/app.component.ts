@@ -9,7 +9,9 @@ import { AuthenticationService } from './core/services/authentication.service';
 export class AppComponent {
   title = 'MovieShopSPA';
 
-  constructor(authenticationService:AuthenticationService) {
-      authenticationService.populateUserData();
+  constructor(private authenticationService:AuthenticationService) {}
+
+  ngOnInit() {
+    this.authenticationService.populateUserData();
   }
 }
