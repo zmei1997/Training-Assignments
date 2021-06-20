@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
+import { UserService } from 'src/app/core/services/user.service';
 import { MovieCard } from 'src/app/shared/models/moviecard';
 import { User } from 'src/app/shared/models/user';
 
@@ -15,7 +15,7 @@ export class PurchasesComponent implements OnInit {
   user!: User;
   movies!: MovieCard[];
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService, private userService:UserService) {
     this.authenticationService.isAuthenticated.subscribe(auth => {
       this.isAuth = auth;
       console.log('Auth Status:' + this.isAuth);
@@ -30,7 +30,7 @@ export class PurchasesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authenticationService.getUserPurchasedMovies(this.user.nameid).subscribe(pm => { this.movies = pm });
+    this.userService.getUserPurchasedMovies(this.user.nameid).subscribe(pm => { this.movies = pm });
   }
 
 }

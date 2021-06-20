@@ -68,16 +68,4 @@ export class AuthenticationService {
     this.isAuthenticatedSubject.next(false);
   }
 
-  getUserPurchasedMovies(id:number) : Observable<MovieCard[]> {
-    // set authorization header
-    var header = {
-      headers: new HttpHeaders()
-        .set('Authorization',  `Bearer ${localStorage.getItem('jwtToken')}`)
-    }
-
-    return this.http.get(`${environment.apiUrl}${'User/'}${id}${'/purchases'}`, header).pipe(
-      map(response=>response as MovieCard[])
-    );
-  }
-
 }
