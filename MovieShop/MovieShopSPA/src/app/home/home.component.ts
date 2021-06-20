@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
         this.movies = m;
         console.log('inside Home Component');
         //console.log(this.movies);
-        console.table(this.movies);
+        // console.table(this.movies);
       }
 
     );
